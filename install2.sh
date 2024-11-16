@@ -5,3 +5,6 @@ docker image remove sanjaypatni5/api:latest
 docker image remove sanjaypatni5/content:latest
 docker run -d sanjaypatni5/api:latest
 docker run -d sanjaypatni5/content:latest
+docker run -d sanjaypatni5/apigateway:latest
+docker run -d sanjaypatni5/eureka:latest
+docker run -d sanjaypatni5/upload:latest
