@@ -1,0 +1,91 @@
+version: '3.3'
+services:
+  eureka:
+    image: sanjaypatni5/eureka 
+    restart: on-failure
+    networks:
+      - custom3
+    container_name: eureka 
+    ports:
+      - "8761:8761"
+  mysqldb:
+    image: mysql:8.3.0
+    restart: always
+    environment:
+       MYSQL_DATABASE: playclips
+       MYSQL_ROOT_PASSWORD: demo
+       MYSQL_ROOT_HOST: '%'
+       MYSQL_SERVER: mysqldb
+    networks:
+      - custom3
+    volumes:
+       - mysql-volume:/var/lib/mysql
+  api:
+    image: sanjaypatni5/api
+    restart: on-failure
+    networks:
+      - custom3
+    external_links:
+      - eureka
+    container_name: api
+    ports:
+      - "5003:5003"
+    depends_on:
+       - mysqldb
+    volumes:
+      - ~/config:/var/config/
+    environment:
+       MYSQL_SERVER: mysqldb
+       EUREKA_SERVER: http://eureka:8761/
+       API_SERVER: api-jwt
+       dbHost: dist_mysqldb_1
+  content:
+    image: sanjaypatni5/content
+    restart: on-failure
+    networks:
+      - custom3
+    external_links:
+      - eureka
+    container_name: content
+    ports:
+      - "5008:5008"
+    depends_on:
+       - mysqldb
+    volumes:
+      - ~/config:/var/config
+    environment:
+       MYSQL_SERVER: mysqldb
+       EUREKA_SERVER: http://eureka:8761
+       dbHost: dist_mysqldb_1 
+  upload:
+    image: sanjaypatni5/upload
+    restart: on-failure
+    networks:
+      - custom3
+    external_links:
+      - eureka
+    container_name: upload
+    ports:
+      - "5009:5009"
+    depends_on:
+       - mysqldb
+    volumes:
+      - ~/config:/var/config
+    environment:
+       MYSQL_SERVER: mysqldb
+       EUREKA_SERVER: http://eureka:8761
+  apigateway:
+    image: sanjaypatni5/apigateway 
+    restart: on-failure
+    networks:
+      - custom3
+    container_name: apigateway 
+    ports:
+      - "8095:8095"
+    environment:
+       APP_SERVER: api
+       EUREKA_SERVER: http://eureka:8761/
+volumes:
+  mysql-volume:
+networks:
+  custom3:
