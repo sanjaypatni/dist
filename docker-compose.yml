@@ -39,7 +39,7 @@ services:
        EUREKA_SERVER: http://eureka:8761/
        API_SERVER: api-jwt
        dbHost: dist_mysqldb_1
-       waToken: EAALo0iuubooBOwggjTfsLCTkQCDa01EtJKHdSkyFKkMptBlZCG7zwcEZCklZANxpxv6vVB3xjo20rR3J7wXZCpYIZCiLNzjA0RGb2Qcc7EKFH1Qq6K4VRJXtZA6ZCS6hSZAQs39u9GyNMePIOh3uW7biF6QWrh55vtTmU44193pcNDRdZA0EogVYA3mnOcdnmz8B1PG0zXwMl431p0YjnX4NXqxWqZCuj3DoZBMxCIZD
+       waToken: EAALo0iuubooBO4eZA15qqavCyymJOiWX08ZALOMor1zfm1CZC0Cwc53aYaJSnyNOtPgBkaEGqr5nRIz55KhuOOCsBKdKKZAt9JQ79gMpRQ1bnLjz6YolUoUpm8Rq2wzZABgbYF1PyLR6EoAwiy36yq0RZAN61NOUzAXmSbCZAx5lZCxisQ8GizcUZBpaFD5JN9nZAOjInuyACXdNT0IzBESeE2vwgdO5yQGNDY4pgZD
   content:
     image: sanjaypatni5/content
     restart: on-failure
