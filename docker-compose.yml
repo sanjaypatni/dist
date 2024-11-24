@@ -42,6 +42,7 @@ services:
        bcUrl: HTTP://127.0.0.1:7545
 #      bcUrl: https://eth-mainnet.g.alchemy.com/v2/2SoGMSPGxpLZv3ezQKEEyT1I_8-J6VrL
        waToken: EAALo0iuubooBO4eZA15qqavCyymJOiWX08ZALOMor1zfm1CZC0Cwc53aYaJSnyNOtPgBkaEGqr5nRIz55KhuOOCsBKdKKZAt9JQ79gMpRQ1bnLjz6YolUoUpm8Rq2wzZABgbYF1PyLR6EoAwiy36yq0RZAN61NOUzAXmSbCZAx5lZCxisQ8GizcUZBpaFD5JN9nZAOjInuyACXdNT0IzBESeE2vwgdO5yQGNDY4pgZD
+
   content:
     image: sanjaypatni5/content
     restart: on-failure
@@ -77,6 +78,26 @@ services:
     environment:
        MYSQL_SERVER: mysqldb
        EUREKA_SERVER: http://eureka:8761
+
+  web3j:
+    image: sanjaypatni5/web3j
+    restart: on-failure
+    networks:
+      - custom3
+    external_links:
+      - eureka
+    container_name: web3j
+    ports:
+      - "8096:8096"
+    depends_on:
+       - mysqldb
+    volumes:
+      - ~/config:/var/config/
+    environment:
+       MYSQL_SERVER: mysqldb
+       EUREKA_SERVER: http://eureka:8761/
+       dbHost: latest-server-mysqldb-1
+#      bcUrl: https://eth-mainnet.g.alchemy.com/v2/2SoGMSPGxpLZv3ezQKEEyT1I_8-J6VrL
   apigateway:
     image: sanjaypatni5/apigateway 
     restart: on-failure
