@@ -86,6 +86,7 @@ services:
       - custom3
     external_links:
       - eureka
+      - host
     container_name: web3j
     ports:
       - "8096:8096"
