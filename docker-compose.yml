@@ -14,9 +14,6 @@ services:
     networks:
       - custom3
     container_name: message
-    build:
-      context: ./message
-      dockerfile: Dockerfile
     ports:
       - "8081:8081"
   mysqldb:
