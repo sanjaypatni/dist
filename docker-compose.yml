@@ -8,6 +8,17 @@ services:
     container_name: eureka 
     ports:
       - "8761:8761"
+  message:
+    image: message
+    restart: on-failure
+    networks:
+      - custom3
+    container_name: message
+    build:
+      context: ./message
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
   mysqldb:
     image: mysql:8.3.0
     restart: always
