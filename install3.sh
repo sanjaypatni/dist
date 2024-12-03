@@ -10,7 +10,7 @@ docker image remove sanjaypatni5/web3j:latest
 docker image remove sanjaypatni5/message:latest
 docker login
 docker-compose pull
-docker-compose up -d
+docker-compose -f "docker-compose_micronaut.yml" up -d
 cp -R /root/dist.kafka/kafka_2.13-3.1.0 .
 cp -R /root/dist.kafka/events .
 cp ./kafka.sh  /root/dist/kafka_2.13-3.1.0
