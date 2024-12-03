@@ -9,7 +9,7 @@ services:
     ports:
       - "8761:8761"
   message:
-    image: sanjaypatni5/message
+    image: sanjaypatni5/message:latest
     restart: on-failure
     networks:
       - custom3
