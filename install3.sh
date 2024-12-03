@@ -7,6 +7,7 @@ docker image remove sanjaypatni5/eureka:latest
 docker image remove sanjaypatni5/apigateway:latest
 docker image remove sanjaypatni5/upload:latest
 docker image remove sanjaypatni5/web3j:latest
+docker image remove sanjaypatni5/message:latest
 docker login
 docker-compose pull
 docker-compose up -d
