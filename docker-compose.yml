@@ -9,7 +9,7 @@ services:
     ports:
       - "8761:8761"
   mysqldb:
-    image: mysql/mysql-server:latest 
+    image: mysql:8.3 
     restart: always
     environment:
        MYSQL_DATABASE: playclips
