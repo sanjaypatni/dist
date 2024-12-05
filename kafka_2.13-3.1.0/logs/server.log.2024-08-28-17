@@ -1,0 +1,3 @@
+[2024-08-28 17:07:17,316] INFO Expiring session 0x100000297130002, timeout of 18000ms exceeded (org.apache.zookeeper.server.ZooKeeperServer)
+[2024-08-28 17:08:44,892] INFO Snapshotting: 0x95 to /tmp/zookeeper/version-2/snapshot.95 (org.apache.zookeeper.server.persistence.FileTxnSnapLog)
+[2024-08-28 17:08:44,969] INFO Snapshot taken in 77 ms (org.apache.zookeeper.server.ZooKeeperServer)

@@ -1,0 +1,8 @@
+[2024-08-22 20:18:58,228] INFO [LocalLog partition=playclips-0, dir=/tmp/kafka-logs] Rolled new log segment at offset 10 in 2 ms. (kafka.log.LocalLog)
+[2024-08-22 20:18:58,229] INFO [ProducerStateManager partition=playclips-0] Wrote producer snapshot at offset 10 with 0 producer ids in 1 ms. (kafka.log.ProducerStateManager)
+[2024-08-22 20:18:58,230] INFO [UnifiedLog partition=playclips-0, dir=/tmp/kafka-logs] Deleting segment LogSegment(baseOffset=0, size=2843, lastModifiedTime=1723753063821, largestRecordTimestamp=Some(1723753063824)) due to retention time 604800000ms breach based on the largest record timestamp in the segment (kafka.log.UnifiedLog)
+[2024-08-22 20:18:58,232] INFO [UnifiedLog partition=playclips-0, dir=/tmp/kafka-logs] Incremented log start offset to 10 due to segment deletion (kafka.log.UnifiedLog)
+[2024-08-22 20:19:58,231] INFO [LocalLog partition=playclips-0, dir=/tmp/kafka-logs] Deleting segment files LogSegment(baseOffset=0, size=2843, lastModifiedTime=1723753063821, largestRecordTimestamp=Some(1723753063824)) (kafka.log.LocalLog$)
+[2024-08-22 20:19:58,231] INFO Deleted log /tmp/kafka-logs/playclips-0/00000000000000000000.log.deleted. (kafka.log.LogSegment)
+[2024-08-22 20:19:58,231] INFO Deleted offset index /tmp/kafka-logs/playclips-0/00000000000000000000.index.deleted. (kafka.log.LogSegment)
+[2024-08-22 20:19:58,232] INFO Deleted time index /tmp/kafka-logs/playclips-0/00000000000000000000.timeindex.deleted. (kafka.log.LogSegment)
