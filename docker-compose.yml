@@ -109,6 +109,17 @@ services:
     environment:
        APP_SERVER: api
        EUREKA_SERVER: http://eureka:8761/
+  message:
+    image: sanjaypatni5/message
+    restart: on-failure
+    networks:
+      - custom3
+    container_name: message
+    ports:
+      - "8081:8081"
+    environment:
+       APP_SERVER: api
+       EUREKA_SERVER: http://eureka:8761/
 volumes:
   mysql-volume:
 networks:
