@@ -41,7 +41,7 @@ services:
        dbHost: dist_mysqldb_1
        bcUrl: HTTP://127.0.0.1:7545
 #      bcUrl: https://eth-mainnet.g.alchemy.com/v2/2SoGMSPGxpLZv3ezQKEEyT1I_8-J6VrL
-       waToken: EAALo0iuubooBO4eZA15qqavCyymJOiWX08ZALOMor1zfm1CZC0Cwc53aYaJSnyNOtPgBkaEGqr5nRIz55KhuOOCsBKdKKZAt9JQ79gMpRQ1bnLjz6YolUoUpm8Rq2wzZABgbYF1PyLR6EoAwiy36yq0RZAN61NOUzAXmSbCZAx5lZCxisQ8GizcUZBpaFD5JN9nZAOjInuyACXdNT0IzBESeE2vwgdO5yQGNDY4pgZD
+       waToken: EAALo0iuubooBO3nNlzKcAjRz2MJpAZBYPnFrgUIA0HZB2NlFs1m2r6XZBbIG7JNeVc0qcDHXD56pjHtyZBRuzofhe1w9ztao8HwDb75xEkgqZBaLRO4iFJn479XBoDVTzJdG0ZADuZBSa9XqbH8jeAnu9J9scZBpgx7XnP1iyZCWTrtLVgNvTbFSsQakTz9c1PVoW6uQdHLUw2JkasaEYxeha0vCaG4LIMXJ0qOIZD
 
   content:
     image: sanjaypatni5/content
