@@ -1,5 +1,6 @@
 #!/bin/bash
 apt update
+(sleep 10; echo Y) | apt install openjdk-11-jre-headless
 (sleep 10; echo Y) | apt install docker
 (sleep 10; echo Y) | apt install docker-compose
 sudo apt install git-lfs
