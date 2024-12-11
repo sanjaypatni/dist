@@ -2,6 +2,10 @@
 apt update
 (sleep 10; echo Y) | apt install docker
 (sleep 10; echo Y) | apt install docker-compose
+sudo apt install git-lfs
+cd /root/dist
+git lfs fetch --all
+git lfs pull
 docker stop `docker ps -q`
 docker container prune -f
 docker image remove sanjaypatni5/api:latest
@@ -16,6 +20,7 @@ docker-compose pull
 cp ./kafka.sh  /root/dist/kafka_2.13-3.1.0
 cd /var/lib/docker/volumes
 mv dist_mysql-volume dist_mysql-volume.bak
-tar xvf /root/dist/dist_mysql-volume.tar /var/lib/docker/volumes
+cd /var/lib/docker/volumes
+tar xvf /root/dist/dist_mysql-volume.tar
 cd /root/dist
 docker-compose up -d
