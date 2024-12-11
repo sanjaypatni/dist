@@ -1,6 +1,6 @@
 #!/bin/bash
-apt install docker
-apt install docker-compose
+(sleep 10; echo Y) | apt install docker
+(sleep 10; echo Y) | apt install docker-compose
 docker stop `docker ps -q`
 docker container prune -f
 docker image remove sanjaypatni5/api:latest
