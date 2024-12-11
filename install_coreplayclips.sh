@@ -1,4 +1,5 @@
 #!/bin/bash
+apt update
 (sleep 10; echo Y) | apt install docker
 (sleep 10; echo Y) | apt install docker-compose
 docker stop `docker ps -q`
@@ -10,7 +11,7 @@ docker image remove sanjaypatni5/apigateway:latest
 docker image remove sanjaypatni5/upload:latest
 docker image remove sanjaypatni5/web3j:latest
 docker image remove sanjaypatni5/message:latest
-docker login
+(sleep 5; echo sanjaypatni5; sleep 5; echo Apple6490) | docker login
 docker-compose pull
 cp -R dist_mysql-volume/* /var/lib/docker/volumes/dist_mysql-volume
 docker-compose up -d
