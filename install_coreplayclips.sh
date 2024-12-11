@@ -3,7 +3,11 @@ apt update
 (sleep 10; echo Y) | apt install openjdk-11-jre-headless
 (sleep 10; echo Y) | apt install docker
 (sleep 10; echo Y) | apt install docker-compose
-sudo apt install git-lfs
+a2enmod proxy && sudo a2enmod proxy_http && sudo service apache2 restart
+(sleep 10; echo Y) | apt install python3-certbot-apache
+#certbot --apache -d coreplayclips.com
+apt install git-lfs
+(sleepp 10; echo Y) | apt install apache2
 cd /root/dist
 git lfs fetch --all
 git lfs pull
