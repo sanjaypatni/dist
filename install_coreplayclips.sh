@@ -4,9 +4,10 @@ apt update
 (sleep 10; echo Y) | apt install docker
 (sleep 10; echo Y) | apt install docker-compose
 (sleepp 10; echo Y) | apt install apache2
+cp /root/dist/apache2.com /etc/apache2
 a2enmod proxy && sudo a2enmod proxy_http && sudo service apache2 restart
 (sleep 10; echo Y) | apt install python3-certbot-apache
-(sleep 5; echo sanjaypatni@yahoo.com; sleep 5; echo A; sleep 5; echo Y; sleep 5; echo 1 ) | certbot --apache -d coreplayclips.com
+(sleep 5; echo sanjaypatni@yahoo.com; sleep 5; echo A; sleep 5; echo Y; sleep 5; echo 2 ) | certbot --apache -d coreplayclips.com
 apt install git-lfs
 cd /root/dist
 git lfs fetch --all
