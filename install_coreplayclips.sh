@@ -12,7 +12,6 @@ docker image remove sanjaypatni5/web3j:latest
 docker image remove sanjaypatni5/message:latest
 docker login
 docker-compose pull
+cp -R dist_mysql-volume/* /var/lib/docker/volumes/dist_mysql-volume
 docker-compose up -d
-#cp -R /root/dist.kafka/kafka_2.13-3.1.0 .
-#cp -R /root/dist.kafka/events .
 cp ./kafka.sh  /root/dist/kafka_2.13-3.1.0
