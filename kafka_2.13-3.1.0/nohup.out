@@ -1499,3 +1499,168 @@ Error while executing topic command : Topic 'playclips' already exists.
 2024-12-11 18:55:37.177  INFO 9260 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-group1-1, groupId=group1] Resetting offset for partition playclips-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[coreplayclips.com:9092 (id: 0 rack: null)], epoch=0}}.
 2024-12-11 18:55:37.220  INFO 9260 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group1: partitions assigned: [playclips-0]
 Error while executing topic command : Topic 'playclips' already exists.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.4)
+
+2024-12-11 19:58:22.047  INFO 9369 --- [           main] com.playclips.Application                : Starting Application v0.0.1-SNAPSHOT using Java 11.0.25 on ubuntu with PID 9369 (/root/dist/events/target/event-0.0.1-SNAPSHOT.jar started by root in /root/dist/kafka_2.13-3.1.0)
+2024-12-11 19:58:22.070  INFO 9369 --- [           main] com.playclips.Application                : No active profile set, falling back to default profiles: default
+2024-12-11 19:58:24.216  INFO 9369 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5014 (http)
+2024-12-11 19:58:24.233  INFO 9369 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-11 19:58:24.233  INFO 9369 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2024-12-11 19:58:24.288  INFO 9369 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-11 19:58:24.289  INFO 9369 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1940 ms
+2024-12-11 19:58:25.137  INFO 9369 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group1-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-12-11 19:58:25.353  INFO 9369 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2024-12-11 19:58:25.357  INFO 9369 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2024-12-11 19:58:25.357  INFO 9369 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1733947105352
+2024-12-11 19:58:25.359  INFO 9369 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-group1-1, groupId=group1] Subscribed to topic(s): playclips
+2024-12-11 19:58:25.427  INFO 9369 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5014 (http) with context path ''
+2024-12-11 19:58:25.461  INFO 9369 --- [           main] com.playclips.Application                : Started Application in 4.425 seconds (JVM running for 5.25)
+2024-12-11 19:58:25.821  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:25.822  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:25.922  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:25.922  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:26.073  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:26.073  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:26.325  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:26.326  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:26.679  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:26.679  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:27.486  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:27.487  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:28.342  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:28.343  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:29.460  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:29.460  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:30.545  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:30.545  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:31.418  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:31.419  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:32.283  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:32.284  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:33.238  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:33.239  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:34.158  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:34.158  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:35.165  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:35.165  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:36.362  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:36.362  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:37.519  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:37.519  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:38.625  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:38.626  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:39.780  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:39.781  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:40.813  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:40.813  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:42.037  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:42.037  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:42.995  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:42.995  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:43.865  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-12-11 19:58:43.865  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-12-11 19:58:45.378  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Error while fetching metadata with correlation id 2 : {playclips=UNKNOWN_TOPIC_OR_PARTITION}
+2024-12-11 19:58:45.384  INFO 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group1-1, groupId=group1] Cluster ID: tPa5FJZeTr-4YJXxDXwsYw
+2024-12-11 19:58:45.521  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Error while fetching metadata with correlation id 6 : {playclips=LEADER_NOT_AVAILABLE}
+2024-12-11 19:58:45.624  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Error while fetching metadata with correlation id 8 : {playclips=UNKNOWN_TOPIC_OR_PARTITION}
+2024-12-11 19:58:45.740  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Error while fetching metadata with correlation id 10 : {playclips=LEADER_NOT_AVAILABLE}
+2024-12-11 19:58:45.842  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Error while fetching metadata with correlation id 12 : {playclips=UNKNOWN_TOPIC_OR_PARTITION}
+2024-12-11 19:58:45.975  WARN 9369 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-group1-1, groupId=group1] Error while fetching metadata with correlation id 14 : {playclips=LEADER_NOT_AVAILABLE}
+2024-12-11 19:58:47.143  INFO 9369 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-group1-1, groupId=group1] Discovered group coordinator coreplayclips.com:9092 (id: 2147483647 rack: null)
+2024-12-11 19:58:47.153  INFO 9369 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-group1-1, groupId=group1] (Re-)joining group
+2024-12-11 19:58:47.211  INFO 9369 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-group1-1, groupId=group1] (Re-)joining group
+2024-12-11 19:58:47.238  INFO 9369 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-group1-1, groupId=group1] Successfully joined group with generation Generation{generationId=1, memberId='consumer-group1-1-9f5c0f93-a0ad-4fd2-a25f-e68727614947', protocol='range'}
+2024-12-11 19:58:47.239  INFO 9369 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group1-1, groupId=group1] Finished assignment for group at generation 1: {consumer-group1-1-9f5c0f93-a0ad-4fd2-a25f-e68727614947=Assignment(partitions=[playclips-0])}
+2024-12-11 19:58:47.382  INFO 9369 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-group1-1, groupId=group1] Successfully synced group in generation Generation{generationId=1, memberId='consumer-group1-1-9f5c0f93-a0ad-4fd2-a25f-e68727614947', protocol='range'}
+2024-12-11 19:58:47.383  INFO 9369 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group1-1, groupId=group1] Notifying assignor about the new Assignment(partitions=[playclips-0])
+2024-12-11 19:58:47.385  INFO 9369 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group1-1, groupId=group1] Adding newly assigned partitions: playclips-0
+2024-12-11 19:58:47.392  INFO 9369 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group1-1, groupId=group1] Found no committed offset for partition playclips-0
+2024-12-11 19:58:47.424  INFO 9369 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group1-1, groupId=group1] Found no committed offset for partition playclips-0
+2024-12-11 19:58:47.448  INFO 9369 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-group1-1, groupId=group1] Resetting offset for partition playclips-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[coreplayclips.com:9092 (id: 0 rack: null)], epoch=0}}.
+2024-12-11 19:58:47.534  INFO 9369 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group1: partitions assigned: [playclips-0]
+Error while executing topic command : Topic 'playclips' already exists.
