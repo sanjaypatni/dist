@@ -4,3 +4,5 @@
  (kafka.admin.TopicCommand$)
 [2024-12-11 19:58:52,839] ERROR org.apache.kafka.common.errors.TopicExistsException: Topic 'playclips' already exists.
  (kafka.admin.TopicCommand$)
+[2024-12-12 02:17:10,474] ERROR org.apache.kafka.common.errors.TopicExistsException: Topic 'playclips' already exists.
+ (kafka.admin.TopicCommand$)
