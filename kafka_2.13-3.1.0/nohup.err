@@ -1,2 +1,12 @@
 [2024-12-05 14:16:01,929] ERROR org.apache.kafka.common.errors.TopicExistsException: Topic 'playclips' already exists.
  (kafka.admin.TopicCommand$)
+[2024-12-11 18:55:42,211] ERROR org.apache.kafka.common.errors.TopicExistsException: Topic 'playclips' already exists.
+ (kafka.admin.TopicCommand$)
+[2024-12-11 19:58:52,839] ERROR org.apache.kafka.common.errors.TopicExistsException: Topic 'playclips' already exists.
+ (kafka.admin.TopicCommand$)
+[2024-12-12 02:17:10,474] ERROR org.apache.kafka.common.errors.TopicExistsException: Topic 'playclips' already exists.
+ (kafka.admin.TopicCommand$)
+[2024-12-12 03:11:04,534] ERROR org.apache.kafka.common.errors.TopicExistsException: Topic 'playclips' already exists.
+ (kafka.admin.TopicCommand$)
+[2024-12-13 11:19:21,423] ERROR org.apache.kafka.common.errors.TopicExistsException: Topic 'playclips' already exists.
+ (kafka.admin.TopicCommand$)

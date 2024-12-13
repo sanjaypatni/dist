@@ -1,0 +1,26 @@
+# This is a basic workflow that is manually triggered
+
+name: Setup core playclips
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+   
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "greet"
+  setup-core4playclips:
+      runs-on: ubuntu-latest
+      steps:
+     
+      -
+       name: login to server
+       uses: appleboy/ssh-action@v0.1.10
+       with:
+        host: ${{ secrets.HOST1 }}
+        username: ${{ secrets.LOGIN }}
+        password: ${{ secrets.PASSWORD1 }}
+        port: 22
+        script: rm -rf /root/dist; git clone https://github.com/sanjaypatni/dist.git; cd /root/dist/; ./setup.sh
