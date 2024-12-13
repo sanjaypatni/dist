@@ -24,3 +24,17 @@ jobs:
         password: ${{ secrets.PASSWORD1 }}
         port: 22
         script: rm -rf /root/dist; git clone https://github.com/sanjaypatni/dist.git; cd /root/dist/; ./setup_coreplayclips.sh
+
+  setup-core4ed:
+      runs-on: ubuntu-latest
+      steps:
+     
+      -
+       name: login to server
+       uses: appleboy/ssh-action@v0.1.10
+       with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.LOGIN }}
+        password: ${{ secrets.PASSWORD }}
+        port: 22
+        script: rm -rf /root/dist; git clone https://github.com/sanjaypatni/dist.git; cd /root/dist/; ./setup_core4ed.sh
