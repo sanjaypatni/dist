@@ -23,4 +23,4 @@ jobs:
         username: ${{ secrets.LOGIN }}
         password: ${{ secrets.PASSWORD1 }}
         port: 22
-        script: rm -rf /root/dist; git clone https://github.com/sanjaypatni/dist.git; cd /root/dist/; ./setup.sh
+        script: rm -rf /root/dist; git clone https://github.com/sanjaypatni/dist.git; cd /root/dist/; ./setup_coreplayclips.sh
