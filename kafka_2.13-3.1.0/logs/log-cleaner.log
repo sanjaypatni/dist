@@ -30,3 +30,5 @@
 [2024-12-12 02:17:01,195] INFO [kafka-log-cleaner-thread-0]: Starting (kafka.log.LogCleaner)
 [2024-12-12 03:10:54,683] INFO Starting the log cleaner (kafka.log.LogCleaner)
 [2024-12-12 03:10:54,752] INFO [kafka-log-cleaner-thread-0]: Starting (kafka.log.LogCleaner)
+[2024-12-13 11:19:12,225] INFO Starting the log cleaner (kafka.log.LogCleaner)
+[2024-12-13 11:19:12,302] INFO [kafka-log-cleaner-thread-0]: Starting (kafka.log.LogCleaner)

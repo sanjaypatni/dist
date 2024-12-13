@@ -9,6 +9,6 @@ docker image remove sanjaypatni5/upload:latest
 docker image remove sanjaypatni5/web3j:latest
 docker image remove sanjaypatni5/message:latest
 (sleep 5; echo sanjaypatni5; sleep 5; echo Apple6490) | docker login
-docker-compose pull
+#docker-compose pull
 cp ./kafka.sh  /root/dist/kafka_2.13-3.1.0
 cd /root/dist;docker-compose up -d
