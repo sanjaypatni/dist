@@ -2,7 +2,6 @@ version: '3.3'
 services:
   eureka:
     image: sanjaypatni5/eureka 
-    restart: on-failure
     networks:
       - custom3
     container_name: eureka 
@@ -22,7 +21,6 @@ services:
        - mysql-volume:/var/lib/mysql
   api:
     image: sanjaypatni5/api
-    restart: on-failure
     networks:
       - custom3
     external_links:
@@ -45,7 +43,6 @@ services:
 
   content:
     image: sanjaypatni5/content
-    restart: on-failure
     networks:
       - custom3
     external_links:
@@ -63,7 +60,6 @@ services:
        dbHost: dist_mysqldb_1 
   upload:
     image: sanjaypatni5/upload
-    restart: on-failure
     networks:
       - custom3
     external_links:
@@ -80,7 +76,6 @@ services:
        EUREKA_SERVER: http://eureka:8761
   apigateway:
     image: sanjaypatni5/apigateway 
-    restart: on-failure
     networks:
       - custom3
     container_name: apigateway 
