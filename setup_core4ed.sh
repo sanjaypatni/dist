@@ -7,7 +7,7 @@ apt update
 cp /root/dist/apache2_core4ed.conf /etc/apache2/apache2.conf
 a2enmod proxy && sudo a2enmod proxy_http && sudo service apache2 restart
 (sleep 10; echo Y) | apt install python3-certbot-apache
-(sleep 5; echo sanjaypatni@yahoo.com; sleep 5; echo A; sleep 5; echo Y; sleep 5; echo 2 ) | certbot --apache -d coreplayclips.com
+(sleep 5; echo sanjaypatni@yahoo.com; sleep 5; echo A; sleep 5; echo Y; sleep 5; echo 2 ) | certbot --apache -d core4ed.com
 apt install git-lfs
 cd /root/dist
 git lfs fetch --all
