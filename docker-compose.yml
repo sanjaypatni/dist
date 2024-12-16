@@ -2,7 +2,6 @@ version: '3.3'
 services:
   eureka:
     image: sanjaypatni5/eureka 
-    restart: on-failure
     networks:
       - custom3
     container_name: eureka 
@@ -22,7 +21,6 @@ services:
        - mysql-volume:/var/lib/mysql
   api:
     image: sanjaypatni5/api
-    restart: on-failure
     networks:
       - custom3
     external_links:
@@ -45,7 +43,6 @@ services:
 
   content:
     image: sanjaypatni5/content
-    restart: on-failure
     networks:
       - custom3
     external_links:
@@ -63,7 +60,6 @@ services:
        dbHost: dist_mysqldb_1 
   upload:
     image: sanjaypatni5/upload
-    restart: on-failure
     networks:
       - custom3
     external_links:
@@ -78,45 +74,13 @@ services:
     environment:
        MYSQL_SERVER: mysqldb
        EUREKA_SERVER: http://eureka:8761
-
-  web3j:
-    image: sanjaypatni5/web3j
-    restart: on-failure
-    networks:
-      - custom3
-    external_links:
-      - eureka
-    container_name: web3j
-    ports:
-      - "8096:8096"
-    depends_on:
-       - mysqldb
-    volumes:
-      - ~/config:/var/config/
-    environment:
-       MYSQL_SERVER: mysqldb
-       EUREKA_SERVER: http://eureka:8761/
-       dbHost: latest-server-mysqldb-1
-#      bcUrl: https://eth-mainnet.g.alchemy.com/v2/2SoGMSPGxpLZv3ezQKEEyT1I_8-J6VrL
   apigateway:
     image: sanjaypatni5/apigateway 
-    restart: on-failure
     networks:
       - custom3
     container_name: apigateway 
     ports:
       - "8095:8095"
-    environment:
-       APP_SERVER: api
-       EUREKA_SERVER: http://eureka:8761/
-  message:
-    image: sanjaypatni5/message
-    restart: on-failure
-    networks:
-      - custom3
-    container_name: message
-    ports:
-      - "8081:8081"
     environment:
        APP_SERVER: api
        EUREKA_SERVER: http://eureka:8761/
