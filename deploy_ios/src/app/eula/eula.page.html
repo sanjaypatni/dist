@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-title>Role</ion-title>
+  <ion-buttons>
+      <ion-back-button defaultHref="sign-in"></ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-list lines="none">
+      <ion-radio-group value="user" (ionChange)="radioGroupChange($event)">
+        <ion-item>
+          <ion-label>User</ion-label>
+          <ion-radio [checked]="false" slot="start" value="user" ></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Composer</ion-label>
+          <ion-radio [checked]="true" slot="start" value="creator" ></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+<div *ngIf="signinService.role == 'creator'">
+ <iframe src="assets/eula.html" name="iframe_eula" height="575px" width="800px" ></iframe>
+</div>
+<ion-item  lines="none">
+    <ion-button shape="round" color="danger" (click)="accept()" >Accept</ion-button>
+    <ion-button shape="round" color="danger" (click)="cancel()" >Cancel</ion-button>
+</ion-item>
+</ion-list>
+</ion-content>

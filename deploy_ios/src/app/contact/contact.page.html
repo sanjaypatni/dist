@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contact</ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="tab1"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-item  lines="none">
+ <ion-label position="stacked"> Name:</ion-label>
+ <ion-input type="name" placeholder="First and Last Name" [(ngModel)]="signinService.title"></ion-input>
+</ion-item>
+<ion-item  lines="none">
+ <ion-label position="stacked"> Email:</ion-label>
+ <ion-input type="name" placeholder="Email" [(ngModel)]="email"></ion-input>
+</ion-item>
+<ion-item  lines="none">
+ <ion-label position="stacked"> Phone:</ion-label>
+ <ion-input type="name" placeholder="Phone" [(ngModel)]="phone"></ion-input>
+</ion-item>
+<ion-item  lines="none">
+      <ion-button expand="block" color="danger" shape="round" (click)="save()" >Save</ion-button>
+      <ion-button expand="block" color="danger"  shape="round" (click)="cancel()" >Cancel</ion-button>
+</ion-item>
+</ion-content>

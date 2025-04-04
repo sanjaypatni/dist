@@ -1,0 +1,494 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+    <ion-title>
+       <center> </center>
+    </ion-title>
+    <ion-buttons slot="start">
+      <div *ngIf="!signinService.logged">
+        <ion-icon name="person-remove-outline" (click)="signin()"></ion-icon>
+      </div>
+      <div *ngIf="signinService.logged">
+         <a  (click)="signout()" ion-button full clear >
+                <ion-icon name="exit"  color="dark" ></ion-icon>
+         </a>
+          <ion-avatar slot="start" (click)="signout()" >
+                <img [src]="signinService.user.login">
+          </ion-avatar>
+         <a  (click)="createContents()" ion-button full clear>
+                <ion-icon name="create"  color="dark" ></ion-icon>
+         </a>
+      </div>
+    </ion-buttons>
+    <ion-buttons slot="end">
+         <ion-icon name="logo-buffer" color="dark" (click)="createPc()"></ion-icon>
+    	 <ion-label *ngIf="signinService.pcCnt>0" >
+      		{{ signinService.pcCnt }}
+    	 </ion-label>
+     </ion-buttons>
+     <ion-img style="height:30%;width:100%"  [src]="hlink"></ion-img>
+    </ion-toolbar>
+  </ion-header>
+<ion-content color="info">
+    <ion-list lines="none">
+    <ion-item *ngFor="let clip of clipReviewed" color="info"> 
+    <ion-item *ngIf="clip.showItem">
+    <div *ngIf="clip.showImage" height="175px" width="225px" >
+    <ion-img [src]="clip.base64String" height="175px" width="225px"  ></ion-img>
+    <ion-label>
+      {{ clip.title }}
+    </ion-label>
+    <ion-label>
+      {{ clip.description }}
+    </ion-label>
+     <div *ngIf="clip.srating1">
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating2">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating3">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating4">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating5">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <a  (click)="addToPc(clip)">
+      <ion-icon name="logo-buffer"></ion-icon>
+     </a>
+     <ion-label *ngIf="clip.disabled">Added</ion-label>
+   </div>
+   <div *ngIf="clip.showAudio">
+    <video  controls poster="{{ clip.thumbnail }}" width="400" height="275" >
+     <source src="{{ clip.link }}" type="video/mp4" >
+     Your browser does not support the <code>audio</code> element.
+    </video>
+    <ion-label>
+      {{ clip.title }}
+    </ion-label>
+    <ion-label>
+      {{ clip.description }}
+    </ion-label>
+     <div *ngIf="clip.srating1">
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating2">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating3">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating4">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating5">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <a  (click)="addToPc(clip)">
+      <ion-icon name="logo-buffer"></ion-icon>
+     </a>
+     <ion-label *ngIf="clip.disabled">Added</ion-label>
+   </div>
+   <div *ngIf="clip.showVideo" poster="{{ clip.thumbnail }}" >
+   <video controls width="400" height="275">
+     <source src="{{ clip.link }}" type="video/mp4" >
+     Your browser does not support the <code>video</code> element.
+   </video>
+    <ion-label>
+      {{ clip.title }}
+    </ion-label>
+    <ion-label>
+      {{ clip.description }}
+    </ion-label>
+     <div *ngIf="clip.srating1">
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating2">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating3">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating4">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating5">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <a  (click)="addToPc(clip)">
+      <ion-icon name="logo-buffer"></ion-icon>
+     </a>
+     <ion-label *ngIf="clip.disabled">Added</ion-label>
+   </div>
+   <div *ngIf="clip.showYTube">
+    <iframe src="assets/iframe.html" name="iframe_a" height="275px" width="400px" ></iframe>
+    <p><a href="{{ clip.link }}" target="iframe_a">Load</a></p>
+    <ion-label>
+      {{ clip.title }}
+    </ion-label>
+    <ion-label>
+      {{ clip.description }}
+    </ion-label>
+     <div *ngIf="clip.srating1">
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating2">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating3">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating4">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating5">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <a  (click)="addToPc(clip)">
+      <ion-icon name="logo-buffer"></ion-icon>
+     </a>
+     <ion-label *ngIf="clip.disabled">Added</ion-label>
+    </div>
+   <div *ngIf="clip.showText">
+    <ion-label>
+      {{ clip.title }}
+    </ion-label>
+    <ion-label text-wrap>
+      {{ clip.description }}
+    </ion-label>
+     <div *ngIf="clip.srating1">
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating2">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating3">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating4">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating5">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <a  (click)="addToPc(clip)">
+      <ion-icon name="logo-buffer"></ion-icon>
+     </a>
+     <ion-label *ngIf="clip.disabled">Added</ion-label>
+    </div>
+     <div *ngIf="clip.showPdf">
+    <ion-label>
+      {{ clip.title }}
+    </ion-label>
+    <ion-label text-wrap>
+      {{ clip.description }}
+    </ion-label>
+     <div *ngIf="clip.srating1">
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating2">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating3">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating4">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating5">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <a  (click)="addToPc(clip)">
+      <ion-icon name="logo-buffer"></ion-icon>
+     </a>
+     <ion-label *ngIf="clip.disabled">Added</ion-label>
+    </div>
+     <div *ngIf="clip.showRecord">
+    <ion-label>
+      {{ clip.title }}
+    </ion-label>
+    <ion-label text-wrap>
+      {{ clip.description }}
+    </ion-label>
+     <div *ngIf="clip.srating1">
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating2">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating3">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating4">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating5">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+      <a  (click)="addToPc(clip)">
+      <ion-icon name="logo-buffer"></ion-icon>
+     </a>
+     <ion-label *ngIf="clip.disabled">Added</ion-label>
+    </div>
+     <div *ngIf="clip.showContact">
+    <ion-label>
+      {{ clip.title }}
+    </ion-label>
+    <ion-label text-wrap>
+      {{ clip.description }}
+    </ion-label>
+     <div *ngIf="clip.srating1">
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating2">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating3">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating4">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating5">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+      <a  (click)="addToPc(clip)">
+      <ion-icon name="logo-buffer"></ion-icon>
+     </a>
+     <ion-label *ngIf="clip.disabled">Added</ion-label>
+    </div>
+     <div *ngIf="clip.showTodo">
+    <ion-label>
+      {{ clip.title }}
+    </ion-label>
+    <ion-label text-wrap>
+      {{ clip.description }}
+    </ion-label>
+     <div *ngIf="clip.srating1">
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating2">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating3">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating4">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating5">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+      <a  (click)="addToPc(clip)">
+      <ion-icon name="logo-buffer"></ion-icon>
+     </a>
+     <ion-label *ngIf="clip.disabled">Added</ion-label>
+    </div>
+     <div *ngIf="clip.showLink">
+    <ion-label>
+      {{ clip.title }}
+    </ion-label>
+    <ion-label text-wrap>
+      {{ clip.description }}
+    </ion-label>
+     <div *ngIf="clip.srating1">
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating2">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating3">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating4">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating5">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+      <a  (click)="addToPc(clip)">
+      <ion-icon name="logo-buffer"></ion-icon>
+     </a>
+     <ion-label *ngIf="clip.disabled">Added</ion-label>
+    </div>
+     <div *ngIf="clip.showChat">
+    <ion-label>
+      {{ clip.title }}
+    </ion-label>
+    <ion-label text-wrap>
+      {{ clip.description }}
+    </ion-label>
+     <div *ngIf="clip.srating1">
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating2">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating3">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating4">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating5">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+      <a  (click)="addToPc(clip)">
+      <ion-icon name="logo-buffer"></ion-icon>
+     </a>
+     <ion-label *ngIf="clip.disabled">Added</ion-label>
+    </div>
+     <div *ngIf="clip.showAppt">
+    <ion-label>
+      {{ clip.title }}
+    </ion-label>
+    <ion-label text-wrap>
+      {{ clip.description }}
+    </ion-label>
+     <div *ngIf="clip.srating1">
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating2">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating3">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating4">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+     <div *ngIf="clip.srating5">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+     </div>
+      <a  (click)="addToPc(clip)">
+      <ion-icon name="logo-buffer"></ion-icon>
+     </a>
+     <ion-label *ngIf="clip.disabled">Added</ion-label>
+    </div>
+   </ion-item>
+   </ion-item>
+ </ion-list>
+
+</ion-content>

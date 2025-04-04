@@ -1,0 +1,4 @@
+0. add udid field in subscription table
+1. Check if this UUID already has an entry in subscription  and if purchased (swift)
+2. If does not have then show personal and team icons . Fill details in StoreKit
+3. If purchased track in subscription table

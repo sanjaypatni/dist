@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA0391EC2A01B1C3003C5BC1 /* playclips2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0391EB2A01B1C3003C5BC1 /* playclips2App.swift */; };
+		BA0391EE2A01B1C3003C5BC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0391ED2A01B1C3003C5BC1 /* ContentView.swift */; };
+		BA0391F02A01B1C4003C5BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0391EF2A01B1C4003C5BC1 /* Assets.xcassets */; };
+		BA0391F32A01B1C4003C5BC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0391F22A01B1C4003C5BC1 /* Preview Assets.xcassets */; };
+		BA0391FD2A01B1C4003C5BC1 /* playclips2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0391FC2A01B1C4003C5BC1 /* playclips2Tests.swift */; };
+		BA0392072A01B1C4003C5BC1 /* playclips2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0392062A01B1C4003C5BC1 /* playclips2UITests.swift */; };
+		BA0392162A01B200003C5BC1 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0392152A01B200003C5BC1 /* TabView.swift */; };
+		BA0392562A1BBF93003C5BC1 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0392552A1BBF93003C5BC1 /* SwiftUIView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA0391F92A01B1C4003C5BC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA0391E02A01B1C3003C5BC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA0391E72A01B1C3003C5BC1;
+			remoteInfo = playclips2;
+		};
+		BA0392032A01B1C4003C5BC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA0391E02A01B1C3003C5BC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA0391E72A01B1C3003C5BC1;
+			remoteInfo = playclips2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA0391E82A01B1C3003C5BC1 /* playclips2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = playclips2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA0391EB2A01B1C3003C5BC1 /* playclips2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playclips2App.swift; sourceTree = "<group>"; };
+		BA0391ED2A01B1C3003C5BC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BA0391EF2A01B1C4003C5BC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA0391F22A01B1C4003C5BC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BA0391F82A01B1C4003C5BC1 /* playclips2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = playclips2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA0391FC2A01B1C4003C5BC1 /* playclips2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playclips2Tests.swift; sourceTree = "<group>"; };
+		BA0392022A01B1C4003C5BC1 /* playclips2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = playclips2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA0392062A01B1C4003C5BC1 /* playclips2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playclips2UITests.swift; sourceTree = "<group>"; };
+		BA0392152A01B200003C5BC1 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		BA0392552A1BBF93003C5BC1 /* SwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftUIView.swift; path = ../../Classes/SwiftUIView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA0391E52A01B1C3003C5BC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA0391F52A01B1C4003C5BC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA0391FF2A01B1C4003C5BC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA0391DF2A01B1C3003C5BC1 = {
+			isa = PBXGroup;
+			children = (
+				BA0391EA2A01B1C3003C5BC1 /* playclips2 */,
+				BA0391FB2A01B1C4003C5BC1 /* playclips2Tests */,
+				BA0392052A01B1C4003C5BC1 /* playclips2UITests */,
+				BA0391E92A01B1C3003C5BC1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA0391E92A01B1C3003C5BC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA0391E82A01B1C3003C5BC1 /* playclips2.app */,
+				BA0391F82A01B1C4003C5BC1 /* playclips2Tests.xctest */,
+				BA0392022A01B1C4003C5BC1 /* playclips2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA0391EA2A01B1C3003C5BC1 /* playclips2 */ = {
+			isa = PBXGroup;
+			children = (
+				BA0392552A1BBF93003C5BC1 /* SwiftUIView.swift */,
+				BA0391EB2A01B1C3003C5BC1 /* playclips2App.swift */,
+				BA0391ED2A01B1C3003C5BC1 /* ContentView.swift */,
+				BA0392152A01B200003C5BC1 /* TabView.swift */,
+				BA0391EF2A01B1C4003C5BC1 /* Assets.xcassets */,
+				BA0391F12A01B1C4003C5BC1 /* Preview Content */,
+			);
+			path = playclips2;
+			sourceTree = "<group>";
+		};
+		BA0391F12A01B1C4003C5BC1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BA0391F22A01B1C4003C5BC1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BA0391FB2A01B1C4003C5BC1 /* playclips2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BA0391FC2A01B1C4003C5BC1 /* playclips2Tests.swift */,
+			);
+			path = playclips2Tests;
+			sourceTree = "<group>";
+		};
+		BA0392052A01B1C4003C5BC1 /* playclips2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				BA0392062A01B1C4003C5BC1 /* playclips2UITests.swift */,
+			);
+			path = playclips2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA0391E72A01B1C3003C5BC1 /* playclips2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA03920C2A01B1C4003C5BC1 /* Build configuration list for PBXNativeTarget "playclips2" */;
+			buildPhases = (
+				BA0391E42A01B1C3003C5BC1 /* Sources */,
+				BA0391E52A01B1C3003C5BC1 /* Frameworks */,
+				BA0391E62A01B1C3003C5BC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = playclips2;
+			productName = playclips2;
+			productReference = BA0391E82A01B1C3003C5BC1 /* playclips2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA0391F72A01B1C4003C5BC1 /* playclips2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA03920F2A01B1C4003C5BC1 /* Build configuration list for PBXNativeTarget "playclips2Tests" */;
+			buildPhases = (
+				BA0391F42A01B1C4003C5BC1 /* Sources */,
+				BA0391F52A01B1C4003C5BC1 /* Frameworks */,
+				BA0391F62A01B1C4003C5BC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA0391FA2A01B1C4003C5BC1 /* PBXTargetDependency */,
+			);
+			name = playclips2Tests;
+			productName = playclips2Tests;
+			productReference = BA0391F82A01B1C4003C5BC1 /* playclips2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA0392012A01B1C4003C5BC1 /* playclips2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA0392122A01B1C4003C5BC1 /* Build configuration list for PBXNativeTarget "playclips2UITests" */;
+			buildPhases = (
+				BA0391FE2A01B1C4003C5BC1 /* Sources */,
+				BA0391FF2A01B1C4003C5BC1 /* Frameworks */,
+				BA0392002A01B1C4003C5BC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA0392042A01B1C4003C5BC1 /* PBXTargetDependency */,
+			);
+			name = playclips2UITests;
+			productName = playclips2UITests;
+			productReference = BA0392022A01B1C4003C5BC1 /* playclips2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA0391E02A01B1C3003C5BC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					BA0391E72A01B1C3003C5BC1 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					BA0391F72A01B1C4003C5BC1 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = BA0391E72A01B1C3003C5BC1;
+					};
+					BA0392012A01B1C4003C5BC1 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = BA0391E72A01B1C3003C5BC1;
+					};
+				};
+			};
+			buildConfigurationList = BA0391E32A01B1C3003C5BC1 /* Build configuration list for PBXProject "playclips2" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA0391DF2A01B1C3003C5BC1;
+			productRefGroup = BA0391E92A01B1C3003C5BC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA0391E72A01B1C3003C5BC1 /* playclips2 */,
+				BA0391F72A01B1C4003C5BC1 /* playclips2Tests */,
+				BA0392012A01B1C4003C5BC1 /* playclips2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA0391E62A01B1C3003C5BC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA0391F32A01B1C4003C5BC1 /* Preview Assets.xcassets in Resources */,
+				BA0391F02A01B1C4003C5BC1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA0391F62A01B1C4003C5BC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA0392002A01B1C4003C5BC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA0391E42A01B1C3003C5BC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA0391EE2A01B1C3003C5BC1 /* ContentView.swift in Sources */,
+				BA0392162A01B200003C5BC1 /* TabView.swift in Sources */,
+				BA0392562A1BBF93003C5BC1 /* SwiftUIView.swift in Sources */,
+				BA0391EC2A01B1C3003C5BC1 /* playclips2App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA0391F42A01B1C4003C5BC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA0391FD2A01B1C4003C5BC1 /* playclips2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA0391FE2A01B1C4003C5BC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA0392072A01B1C4003C5BC1 /* playclips2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA0391FA2A01B1C4003C5BC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA0391E72A01B1C3003C5BC1 /* playclips2 */;
+			targetProxy = BA0391F92A01B1C4003C5BC1 /* PBXContainerItemProxy */;
+		};
+		BA0392042A01B1C4003C5BC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA0391E72A01B1C3003C5BC1 /* playclips2 */;
+			targetProxy = BA0392032A01B1C4003C5BC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BA03920A2A01B1C4003C5BC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA03920B2A01B1C4003C5BC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA03920D2A01B1C4003C5BC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"playclips2/Preview Content\"";
+				DEVELOPMENT_TEAM = 7DH368D68P;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = playclips.playclips2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA03920E2A01B1C4003C5BC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"playclips2/Preview Content\"";
+				DEVELOPMENT_TEAM = 7DH368D68P;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = playclips.playclips2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BA0392102A01B1C4003C5BC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = playclips.playclips2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/playclips2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/playclips2";
+			};
+			name = Debug;
+		};
+		BA0392112A01B1C4003C5BC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = playclips.playclips2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/playclips2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/playclips2";
+			};
+			name = Release;
+		};
+		BA0392132A01B1C4003C5BC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = playclips.playclips2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = playclips2;
+			};
+			name = Debug;
+		};
+		BA0392142A01B1C4003C5BC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = playclips.playclips2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = playclips2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA0391E32A01B1C3003C5BC1 /* Build configuration list for PBXProject "playclips2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA03920A2A01B1C4003C5BC1 /* Debug */,
+				BA03920B2A01B1C4003C5BC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA03920C2A01B1C4003C5BC1 /* Build configuration list for PBXNativeTarget "playclips2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA03920D2A01B1C4003C5BC1 /* Debug */,
+				BA03920E2A01B1C4003C5BC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA03920F2A01B1C4003C5BC1 /* Build configuration list for PBXNativeTarget "playclips2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA0392102A01B1C4003C5BC1 /* Debug */,
+				BA0392112A01B1C4003C5BC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA0392122A01B1C4003C5BC1 /* Build configuration list for PBXNativeTarget "playclips2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA0392132A01B1C4003C5BC1 /* Debug */,
+				BA0392142A01B1C4003C5BC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA0391E02A01B1C3003C5BC1 /* Project object */;
+}

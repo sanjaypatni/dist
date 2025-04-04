@@ -1,0 +1,464 @@
+import { Component } from '@angular/core';
+import {Platform, AlertController, NavController, ToastController, LoadingController} from '@ionic/angular'
+import {Messages} from '../messages'
+import {SigninService} from '../services/sign-in.service'
+import { Api } from '../api';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Content } from '../models/content';
+import { ContentsService } from '../services/contents.service';
+import { SubscriptionService } from '../services/subscription.service';
+import { SelectMultipleControlValueAccessor } from '@angular/forms';
+
+@Component({
+  selector: 'app-create-contents',
+  templateUrl: './create-contents.page.html',
+  styleUrls: ['./create-contents.page.scss'],
+})
+export class CreateContentsPage  {
+  picture = "https://playclips-api.com/app/assets/img/sanjay.png";
+  logged : boolean;
+  title: string;
+  hlink: string;
+  message: string = "";
+  toast: any;
+  platforms: string = "desktop";
+  youtube : boolean = true;
+  indeterminateState: boolean;
+  //radio_list: any;
+  defaultSelectedRadio = "radio_2";
+  //Get value on ionChange on IonRadioGroup
+  selectedRadioGroup:any;
+  //Get value on ionSelect on IonRadio item
+  selectedRadioItem:any;
+  content : Content = new Content();
+  type : string;
+  radio_list_media : any;
+  radio_list_text : any;
+  cnclips : number;
+  nclips : number;
+  link_a = "http://spatni.com/contents/playclips.m4p";
+  pc_link = "https://playclips-api.com/app/listPlayclipsIonic.html";
+  showPdf: boolean = false;
+  showAudio: boolean = false;
+  showAll: boolean = false;
+  constructor( private alertCtrl: AlertController, 
+               private navCtrl: NavController, 
+               public signinService : SigninService,
+               public contentService : ContentsService, 
+               private messages : Messages,
+               private toastCtrl: ToastController, 
+               private platform: Platform,
+               private api : Api, 
+               private http: HttpClient,
+               public loadingController:LoadingController,
+               public subscriptionService: SubscriptionService) {
+    if (this.platform.platforms().includes("ios"))
+     this.platforms= "ios";
+    if (this.platform.platforms().includes("android"))
+     this.platforms= "ios";
+  
+
+    this.signinService.accesstoken(this.signinService.user.login).subscribe(response => {
+      console.log(response);
+      this.signinService.at = response;
+    });
+    
+    console.log(this.platforms);
+
+  }
+
+  ionViewWillEnter() {
+    this.radio_list_media = [
+      {
+        id: '1',
+        name: 'radio_list',
+        value: 'video',
+        text: 'VIDEO',
+        disabled: false,
+        checked: true,
+        color: 'danger',
+        video: true,
+        id1: '2',
+        name1: 'radio_list',
+        value1: 'image',
+        text1: 'IMAGE',
+        disabled1: false,
+        checked1: false,
+        color1: 'danger',
+        image: true,
+        id2: '3',
+        name2: 'radio_list',
+        value2: 'audio',
+        text2: 'AUDIO',
+        disabled2: false,
+        checked2: false,
+        color2: 'danger',
+        audio: true
+      }, {
+        id: '4',
+        name: 'radio_list',
+        value: 'ytube',
+        text: 'YTUBE',
+        disabled: false,
+        checked: false,
+        color: 'danger',
+        ytube: true,
+        id1: '5',
+        name1: 'radio_list',
+        value1: 'record',
+        text1: 'RECORD',
+        disabled1: false,
+        checked1: false,
+        color1: 'danger',
+        record: true,
+        id2: '6',
+        name2: 'radio_list',
+        value2: 'chat',
+        text2: 'CHAT',
+        disabled2: false,
+        checked2: false,
+        color2: 'danger',
+        chat: true
+      }
+    ];
+   this.radio_list_text = [
+      {
+        id: '1',
+        name: 'radio_list',
+        value: 'pdf',
+        text: 'PDF',
+        disabled: false,
+        checked: false,
+        color: 'danger',
+        pdf: true,
+        id1: '2',
+        name1: 'radio_list',
+        value1: 'appt',
+        text1: 'APPT',
+        disabled1: false,
+        checked1: false,
+        color1: 'danger',
+        appt: true,
+        id2:'3',
+        name2: 'radio_list',
+        value2: 'text',
+        text2: 'TEXT',
+        disabled2: false,
+        checked2: false,
+        color2: 'danger',
+        ttext: true
+       },
+      {
+        id: '4',
+        name: 'radio_list',
+        value: 'contact',
+        text: 'CONTACT',
+        disabled: false,
+        checked: false,
+        color: 'danger',
+        contact: true,
+        id1: '5',
+        name1: 'radio_list',
+        value1: 'todo',
+        text1: 'TODO',
+        disabled1: false,
+        checked1: false,
+        color1: 'danger',
+        todo: true,
+        id2: '6',
+        name2: 'radio_list',
+        value2: 'link',
+        text2: 'LINK',
+        disabled2: false,
+        checked2: false,
+        color2: 'danger',
+        link: true
+       }
+    ];
+    this.signinService.title = this.title;
+   }
+  getPcLink() {
+    console.log(this.signinService.pc_link);
+    this.pc_link = this.signinService.pc_link;
+    console.log(this.pc_link);
+    return this.pc_link;
+  }
+  signin() {
+    console.log("Signin");
+    this.navCtrl.navigateForward('sign-in');
+    this.pc_link = this.signinService.pc_link;
+  }
+  signout() {
+    console.log("Signin");
+    this.navCtrl.navigateForward('sign-in');
+  }
+  listContents() {
+    this.navCtrl.navigateForward('list-contents');
+  }
+  chat() {
+    this.navCtrl.navigateForward('chat');
+  }
+  validate() {
+    if ( this.title != undefined ) {
+     if (this.title.length < 4 )
+      this.message = this.messages.titleLenght;
+    }
+    else
+      this.message = this.messages.titleRequired;
+  }
+  uploadAudio() {
+    this.validate();
+    if ( this.message.length > 0 )
+    {
+     this.showToast(this.message);
+     this.message = "";
+    }
+    else
+    if (this.signinService.logged)
+    {
+      window.open(this.api.audio +  this.signinService.user.login + "&title=" + this.title + "&platform=" + this.platforms , "_self");
+      this.title = "";
+    }
+    else
+      this.showAlert(this.messages.signin);
+  }
+  text() {
+      this.signinService.title = this.title;
+      this.navCtrl.navigateForward("text");
+  }
+  youTube() {
+    this.validate();
+    if ( this.message.length > 0 )
+    {
+     this.showToast(this.message);
+     this.message = "";
+    }
+    else
+    if (this.signinService.logged) 
+    {
+      this.signinService.title = this.title;
+      this.navCtrl.navigateForward("search-results-yt");
+    }
+    else
+     this.showAlert(this.messages.signin);
+  }
+  async showAlert(message: string) {
+    let alert = await this.alertCtrl.create({
+      header: "Sign-in",
+      message: message,
+      buttons: [{
+        text: "Ok",
+        handler: () => {
+        }
+      }]
+    })
+    alert.present();
+  }
+ showToast(message : string) {
+  this.toast = this.toastCtrl.create({
+    message: message,
+    duration: 3000
+  }).then((toastData) => {
+    console.log(toastData);
+    toastData.present();
+  });
+ }
+ private file: File;
+  link : string = "";
+
+  onFileChange(fileChangeEvent) {
+    this.file = fileChangeEvent.target.files[0];
+  }
+  async submitForm() {
+    if ( this.file.size > 30096000 ) {
+            this.showToast("File size restricted to less then 30MB");
+            return;
+    }
+    await this.checkSubscription();
+    console.log(this.cnclips);
+    console.log(this.nclips);
+    if ( this.cnclips > this.nclips ) {
+            this.showToast("Subscription - clips storage limit reached");
+            this.navCtrl.navigateForward("subscription");
+            return;
+    }
+    
+    let formData = new FormData();
+    formData.append("file", this.file, this.file.name);
+    let rheaders = new HttpHeaders({ 'Transfer-Encoding': 'chunked' });
+    this.presentLoading();
+    this.http.post<UploadResponse>(this.api.upload, formData, {headers: rheaders}).subscribe((response) => {
+      console.log(response);
+      this.link = response.link;
+    });
+  }
+  async checkSubscription() {
+    this.content.login = this.signinService.user.login;
+    this.contentService.setCnclips(this.content).subscribe((response) => {
+    });
+    await this.sleep(1000);
+    this.subscriptionService.get(this.signinService.user.login).subscribe((response) => {
+     this.nclips = response.nclips;
+     this.cnclips = response.cnclips;
+    });
+    await this.sleep(1000);
+  }
+  radioGroupChange(event) {
+    console.log("radioGroupChange",event.detail);
+    this.selectedRadioGroup = event.detail;
+    this.type = this.selectedRadioGroup.value;
+    console.log(this.selectedRadioGroup.value);
+    this.validate();
+    if ( this.message.length > 0 )
+    {
+     this.showToast(this.message);
+     this.message = "";
+     return;
+    }
+    if (this.selectedRadioGroup.value == "video")
+    {
+      this.signinService.title = this.title;
+      this.video();
+    }
+    if (this.selectedRadioGroup.value == "image")
+    {
+      this.signinService.title = this.title;
+      this.image();
+    }
+    if (this.selectedRadioGroup.value == "text")
+    {
+      this.signinService.title = this.title;
+      this.text();
+    }
+    if (this.selectedRadioGroup.value == "ytube")
+    {
+      this.signinService.title = this.title;
+      this.youTube();
+    }
+    if (this.selectedRadioGroup.value == "todo")
+    {
+      this.tbi();
+    }
+    if (this.selectedRadioGroup.value == "link")
+    {
+      this.tbi();
+    }
+    if (this.selectedRadioGroup.value == "chat")
+    {
+      this.tbi();
+    }
+    if (this.selectedRadioGroup.value == "appt")
+    {
+     this.signinService.title = this.title;
+     this.appt();
+    }
+    if (this.selectedRadioGroup.value == "contact")
+    {
+      this.tbi();
+    }
+    if (this.selectedRadioGroup.value == "pdf")
+    {
+     this.signinService.title = this.title;
+     this.pdf();
+    }
+    if (this.selectedRadioGroup.value == "audio")
+    {
+     this.signinService.title = this.title;
+     this.audio();
+    }
+    if (this.selectedRadioGroup.value == "record")
+    {
+     this.signinService.title = this.title;
+     this.uploadAudio();
+    }
+  }
+  radioFocus() {
+    console.log("radioFocus");
+  }
+  radioSelect(event) {
+    console.log("radioSelect",event.detail);
+    this.selectedRadioItem = event.detail;
+  }
+  radioBlur() {
+    console.log("radioBlur");
+  }
+  createContent() {
+    this.content = new Content();
+    // check for clips uploaded for this user
+    
+    this.content.login = this.signinService.user.login;
+    this.content.link = this.link;
+    this.content.title = this.title;
+    if ( this.type == "image" || this.type == "video" || this.type == "audio")
+     this.content.type = this.type;
+    else
+    {
+     this.showToast("please select a type!");
+     return;
+    }
+
+    this.contentService.publishContent("content-post", this.content).subscribe((response) => {
+      this.message = this.messages.success;
+      this.showToast(this.message);
+      this.navCtrl.navigateForward("tab1")
+    });
+/**
+    this.contentService.createContent(this.content).subscribe((response) => {
+      this.message = this.messages.success;
+      this.showToast(this.message);
+      this.navCtrl.navigateForward("tab1")
+     });
+**/
+  }
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      cssClass: 'my-custom-class',
+      message: 'Please wait...',
+      duration: 2500
+    });
+    await loading.present();
+
+    const { role, data } = await loading.onDidDismiss();
+    console.log('Loading dismissed!');
+  }
+
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+ app_link() {
+  window.open("https://apps.apple.com/us/app/playclips-playclips/id1549384191", "_system");
+ }
+ api_link() {
+  window.open("https://playclips-api.com/app/sign-in.html", "_system");
+ }
+ contact() {
+  window.open("https://playclips-api.com/app/listContact.html", "_system");
+ }
+ todo() {
+  window.open("https://playclips-api.com/app/listTodo.html", "_system");
+ }
+ tbi() {
+  window.open("https://playclips-api.com/app/contact.html", "_self");
+ }
+ appt() {
+   this.navCtrl.navigateForward("appt");
+ }
+ audio() {
+   this.navCtrl.navigateForward("audio");
+ }
+ pdf() {
+   this.navCtrl.navigateForward("pdf");
+ }
+ video() {
+   this.navCtrl.navigateForward("video");
+ }
+ image() {
+   this.navCtrl.navigateForward("image");
+ }
+}
+class UploadResponse {
+  link: string;
+}
+
+

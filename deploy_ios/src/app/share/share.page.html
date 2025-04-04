@@ -1,0 +1,32 @@
+<ion-toolbar>
+    <ion-title>Share</ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="tab4"></ion-back-button>
+    </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+<ion-list lines="none">
+  <ion-item>
+    <ion-label><strong>All</strong></ion-label>
+    <ion-checkbox slot="start" [(ngModel)]="checkParent" [indeterminate]="indeterminateState"
+      (click)="checkCheckbox($event)"></ion-checkbox>
+  </ion-item>
+</ion-list>
+<ion-list>
+  <ion-item *ngFor="let user of users">
+   <ion-item *ngIf="signinService.user.login != user.login">
+   <ion-avatar slot="start">
+    <img [src]="user.login" />
+   </ion-avatar>
+    <ion-label> {{ user.email }} </ion-label>
+   <ion-checkbox slot="start" [(ngModel)]="user.isUserSelected" (ionChange)="verifyEvent()"> </ion-checkbox>
+  </ion-item>
+  </ion-item>
+</ion-list>
+<ion-item>
+      <a  (click)="sharePlayclip()">
+                <ion-icon name="share"></ion-icon>
+     </a>
+</ion-item>
+</ion-content>

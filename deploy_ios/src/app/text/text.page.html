@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Text</ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="create-contents"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+ <ion-list lines="none">
+ <ion-item>
+    <ion-label position="stacked"> Title:</ion-label>
+    <ion-input type="title" placeholder="Title" [(ngModel)]="signinService.title" minlength="4" maxlength="50" ></ion-input>
+  </ion-item>
+  <ion-item>
+  <div class="note">
+  	<div class="tools">
+              <button class="edit"><i class="fas fa-edit"></i></button>
+              <button class="delete"><i class="fas fa-trash-alt"></i></button>
+        </div>
+        <ion-textarea rows="6" cols="20" class="textarea" [(ngModel)]="description" placeholder="Enter any notes here..."></ion-textarea>
+  </div>
+  </ion-item>
+<ion-item>
+      <ion-button expand="block" color="danger" shape="round" (click)="save()" >Save</ion-button>
+      <ion-button expand="block" color="danger" shape="round" (click)="cancel()" >Cancel</ion-button>
+</ion-item>
+</ion-list>
+</ion-content>

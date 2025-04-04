@@ -1,0 +1,16 @@
+ Version 2
+1. PMD check, rules
+2. Make fonts consistent
+3. Emplty Title check and timestamp in subscriptiuon table
+4. Get UDID and update email and login in subscription table
+5. Replace CR with eath address
+6. Replace stripe transcations with eath transcactions
+
+ Version 3
+  Chat
+  Audio
+  SMS
+  Whatsapp integratiion
+  Share
+
+

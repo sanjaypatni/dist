@@ -1,0 +1,89 @@
+import { Component, OnInit } from '@angular/core';
+import { Content } from '../models/content';
+import { SigninService } from '../services/sign-in.service';
+import { ContentsService } from '../services/contents.service';
+import { NavController } from '@ionic/angular'
+import { Router } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
+import { ClipsService } from '../services/clips.service';
+
+@Component({
+  selector: 'app-content-details',
+  templateUrl: './content-details.page.html',
+  styleUrls: ['./content-details.page.scss'],
+})
+export class ContentDetailsPage implements OnInit {
+  content : Content;
+  href : string;
+  constructor(private signinService: SigninService, 
+    private contentsService: ContentsService, 
+    private navCtrl: NavController,
+    private router: Router,
+    private dom: DomSanitizer,
+    private clipsService: ClipsService) {
+
+    this.init();
+
+    }
+
+  sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  ngOnInit() {
+    
+  }
+  async init() {
+    this.href = this.router.url;
+    console.log(this.router.url);
+
+    var index = this.href.lastIndexOf("/");
+    var id = this.href.substring(index + 1);
+    console.log(id);
+    console.log(index);
+    
+    this.contentsService.get(id).subscribe(response => {
+      console.log(response);
+      this.content = response;
+    });
+
+    await this.sleep(500);
+
+    if ( this.content.type == "audio") 
+      this.content.showAudio = true;
+
+    if (this.content.type =="image")
+       this.content.showImage = true;
+
+    if (this.content.type == "video")
+       this.content.showVideo = true;
+
+    if (this.content.type == "ytube")
+       this.content.showYTube = true;
+
+    
+    
+  }
+  delete() {
+    this.contentsService.delete(this.content.id);
+    this.navCtrl.navigateBack(`list-contents`);
+  }
+  unlike() {
+   console.log("unliked");
+    this.contentsService.unlike(this.content).subscribe((response) => {
+      this.navCtrl.navigateForward("list-contents")
+     });
+  }
+  like() {
+   console.log("liked");
+    this.contentsService.like(this.content).subscribe((response) => {
+      this.navCtrl.navigateForward("list-contents")
+     });
+  }
+
+  ytVideoIdSanitizer() {
+    console.log(this.content.link);
+    return this.dom.bypassSecurityTrustResourceUrl(this.content.link);
+  }
+
+}

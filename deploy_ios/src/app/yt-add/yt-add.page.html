@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add</ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="search-results-yt"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-list lines="none">
+  <ion-label>
+    <h3> >{{this.title}} </h3>
+  </ion-label>
+
+
+     <a [href]="videoId" target="_blank">
+     <table>
+     <tr>
+          <td>
+             <img [src]="thumbnail" height="250" width="350" />
+           <table>
+                  <tr>
+                  <td background="https://pc-clips-storage.s3.us-west-1.amazonaws.com/play.png" height="50" width="60">
+                  </td>
+                  </tr>
+           </table>
+          </td>
+     </tr>
+   </table>
+    </a>
+
+  <ion-item>
+    <ion-button shape="round" color="danger"  (click)="add();" >Add</ion-button>
+    <ion-button expand="block" color="danger"  shape="round" (click)="cancel()" >Cancel</ion-button>
+  </ion-item>
+ </ion-list>
+
+</ion-content>

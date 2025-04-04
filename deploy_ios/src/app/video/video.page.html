@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Video</ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="create-contents"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+ </ion-header>
+ <ion-content>
+ <ion-list lines="none">
+ <ion-item>
+    <ion-label position="stacked"> Title:</ion-label>
+    <ion-input type="title" placeholder="Title" [(ngModel)]="signinService.title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <input type="file" (change)="onFileChange($event)" enctype="multipart/form-data"   accept="video/*" />
+  </ion-item>
+  <ion-item>
+  <ion-button color="danger" shape="round"  expand="full" (click)="submitForm()">Upload</ion-button>
+  </ion-item>
+  <ion-item>
+    <img [src]="link" height="175px" width="225px" />
+  </ion-item>
+  <ion-item>
+      <ion-button expand="block" color="danger" shape="round" (click)="save()" >Save</ion-button>
+      <ion-button expand="block" color="danger" shape="round" (click)="cancel()" >Cancel</ion-button>
+  </ion-item>
+ </ion-list>
+</ion-content>

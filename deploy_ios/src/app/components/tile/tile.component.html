@@ -1,0 +1,109 @@
+<div class="movie" *ngIf="item.playType == 'clip'">
+    <img [src]="item.thumbnail" />
+    <div class="movie-info">
+    <ion-label>
+     <div class="overview">
+        <h3>{{item.title}}</h3>
+     </div>
+    </ion-label>
+     <a  (click)="review()">
+          <ion-icon name="create"></ion-icon>
+     </a>
+    </div>
+</div>
+<div class="movie" *ngIf="item.playType == 'playclip'">
+    <a  (click)="viewPlayclipClip()">
+    <div [ngClass]="item.active" style="background-image: url(' {{ item.thumbnail }} '); flex: 0.8"></div>
+    <div class="movie-info">
+    <ion-label>
+     <div class="overview">
+        <h3>{{item.title}}</h3>
+        <h4>{{item.description}}</h4>
+     </div>
+    </ion-label>
+    </div>
+    </a>
+</div>
+<ion-col size="10"  *ngIf="item.playType == 'clipvrodd'">
+<div  style="background-color: #FFB866;height:400px;">
+<p> {{ item.title}} </p>
+<p> {{ item.description }}</p>
+<p> {{ item.srating }}</p>
+<a  (click)="addToPc(item)">
+      <ion-icon name="logo-buffer"></ion-icon>
+</a>
+</div>
+</ion-col>
+<ion-col size="10" *ngIf="item.playType == 'clipvreven'">
+<div  style="background-color:#252E33;height:400px;">
+<p> {{ item.title}} </p>
+<p> {{ item.description }}</p>
+<p> {{ item.srating }}</p>
+<a  (click)="addToPc(item)">
+      <ion-icon name="logo-buffer"></ion-icon>
+</a>
+</div>
+</ion-col>
+<ion-col size="50" *ngIf="item.playType == 'clipvl'">
+<div  style="background-color:none ;height:400px" >
+ <div *ngIf="item.type == 'video'">
+   <p><a [href]="item.link" target="_blank"> <img [src]="item.thumbnail"  /> </a></p>
+ </div>
+ <div *ngIf="item.type == 'ytube'">
+   <p><a [href]="item.link" target="_blank"> <img [src]="item.thumbnail" /> </a></p>
+ </div>
+ <div *ngIf="item.type == 'pdf'">
+   <iframe src="assets/iframe.html" name="iframe_a1" ></iframe>
+  <p><a [href]="this.dom.bypassSecurityTrustResourceUrl(item.base64String)" target="iframe_a1">Load</a></p>
+ </div>
+ <div *ngIf="item.type == 'image'">
+  <img [src]="item.base64String"  ><img>
+ </div>
+ <div *ngIf="item.type == 'text'">
+    <ion-item text-wrap>
+          {{item.description}}
+    </ion-item>
+ </div>
+ <div *ngIf="item.type == 'appt'">
+         <ion-item text-wrap>
+          {{item.description}}
+         </ion-item>
+         <ion-item text-wrap>
+          {{item.link}}
+         </ion-item>
+   <ion-item>
+    <ion-label>Start</ion-label>
+    <ion-datetime displayFormat="DD-MMM-YY HH:mm" (ionChange)="toggle()" [(ngModel)]="item.startDate" min="{{ item.startDate }}" max="{{ item.startDate }}" > </ion-datetime>
+   </ion-item>
+   <ion-item>
+    <ion-label>End</ion-label>
+    <ion-datetime displayFormat="DD-MMM-YY HH:mm" (ionChange)="toggle()" [(ngModel)]="item.endDate"  min="{{ item.endDate }}" max="{{ item.endDate }}" > </ion-datetime>
+   </ion-item>
+  </div>
+ <div *ngIf="item.type == 'contact'">
+        <ion-item>
+          {{item.email}}
+        </ion-item>
+        <ion-item>
+          {{item.phone}}
+        </ion-item>
+ </div>
+ <div *ngIf="item.type == 'link'">
+        <ion-item lines="none">
+          <a [href]="item.link"> {{ item.title }} </a>
+        </ion-item>
+ </div>
+<div *ngIf="item.type == 'audio'">
+    <video  controls poster="{{ item.thumbnail }}" >
+     <source src="{{ item.link }}" type="video/mp4" >
+     Your browser does not support the <code>audio</code> element.
+    </video>
+</div>
+<div *ngIf="item.type == 'record'">
+    <video  controls poster="{{ item.thumbnail }}" >
+     <source src="{{ item.link }}" type="video/mp4" >
+     Your browser does not support the <code>audio</code> element.
+    </video>
+</div>
+</div>
+</ion-col>

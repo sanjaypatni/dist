@@ -1,0 +1,45 @@
+<ion-item *ngIf="playclip" [routerLink]="'/playclip/' + playclip.id" [detail]="false">
+  <div slot="start" [class]="!playclip.read ? 'dot dot-unread' : 'dot'"></div>
+   <ion-avatar slot="start">
+     <img [src]="playclip.thumbnail">
+   </ion-avatar>
+   <ion-label class="ion-text-wrap">
+    <h2>
+      {{ playclip.title }}
+    </h2>
+    <h2>
+      {{ playclip.description }}
+    </h2>
+    <h2>
+      Composer : {{ playclip.createdBy }}
+    </h2>
+    <h2>
+      Price : ${{ playclip.price }}
+    </h2>
+  <ion-button  color="danger" shape="round" name="document" (click)="share(playclip.id)" >
+    <ion-icon name="push-outline" aria-label="Share"></ion-icon>
+  </ion-button>
+  <ion-button  color="danger" shape="round" name="document" (click)="mailPlayclip(playclip.id)" >
+    <ion-icon name="mail-unread-outline" aria-label="Email"></ion-icon>
+  </ion-button>
+  <ion-button  color="danger" shape="round" name="document" (click)="waPlayclip(playclip.id)" >
+    <ion-icon name="logo-wordpress" aria-label="WhatsApp"></ion-icon>
+  </ion-button>
+  </ion-label>
+  <ion-item *ngIf="playclip.bought == 1">
+  <ion-button  color="danger" shape="round" name="document" (click)="play(playclip.id)" >
+    <ion-icon name="caret-forward-circle-outline" aria-label="Play"></ion-icon>
+  </ion-button>
+   </ion-item>
+  <ion-item *ngIf="playclip.bought == 0">
+  <ion-button  color="danger" shape="round" name="document" (click)="buy(playclip.id)" >
+    <ion-icon name="logo-usd" aria-label="Buy"></ion-icon>
+  </ion-button>
+  <ion-button  color="danger" shape="round" name="document" (click)="preview(playclip.id)" >
+    <ion-icon name="play-forward-circle-outline" aria-label="Preview"></ion-icon>
+  </ion-button>
+   </ion-item>
+  <ion-avatar slot="start" *ngIf="playclip.archive == 1" >
+        <ion-icon name="archive"></ion-icon>
+  </ion-avatar>
+</ion-item>

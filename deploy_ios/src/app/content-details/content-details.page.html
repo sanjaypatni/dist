@@ -1,0 +1,149 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Content Details</ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="tab1"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="content != undefind">
+ <ion-list lines="none">
+  <ion-item>
+    <div>
+      <ion-label>
+        <ion-text >
+          <h2 >
+          {{content.title}}
+          </h2>
+        </ion-text>
+      </ion-label>
+    </div>  
+    </ion-item>
+  <ion-item>  
+   <div *ngIf="content.type == 'contact'">
+        <ion-text>
+        <h4>
+          {{content.email}}
+        </h4>
+        </ion-text>
+        <ion-text >
+        <h4>
+          {{content.phone}}
+        </h4>
+        </ion-text>
+   </div>
+    <div *ngIf="content.showImage" height="175px" width="225px">
+         <ion-img [src]="content.base64String"  height="175px" width="225px" ></ion-img>
+   </div>
+   <div *ngIf="content.showAudio">
+    <video  controls poster="{{ content.thumbnail }}" height="175px" width="225px">
+     <source src="{{ content.link }}" type="video/mp4" >
+     Your browser does not support the <code>audio</code> element.
+    </video>
+   </div>
+   <div *ngIf="content.showPdf && signinService.platform.platforms().includes('ios')">
+         <ion-img [src]="content.base64String"  height="175px" width="225px" ></ion-img>
+   </div>
+   <div *ngIf="content.showPdf && !signinService.platform.platforms().includes('ios')">
+	   <p><a [href]="this.dom.bypassSecurityTrustResourceUrl(content.base64String)" target="_blank">
+     		<table>
+     				<tr>
+          				<td>
+             						<img [src]="content.thumbnail" height="250" width="350" />
+                                        </td>
+    				</tr>
+  		</table>
+           </a></p>
+   </div>
+   <div *ngIf="content.showVideo" poster="{{ content.thumbnail }}" width="420" height="315">
+   <video controls width="225" height="175">
+     <source src="{{ content.link }}" type="video/mp4" height="175px" width="225px" >
+     Your browser does not support the <code>video</code> element.
+   </video>
+   </div>
+   <div *ngIf="content.showText" poster="{{ content.thumbnail }}" width="420" height="315">
+         <ion-item text-wrap>
+          {{content.description}}
+         </ion-item>
+   </div>
+   <div *ngIf="content.showAppt" poster="{{ content.thumbnail }}" width="420" height="315">
+         <ion-item text-wrap>
+          {{content.description}}
+         </ion-item>
+         <ion-item text-wrap>
+          {{content.link}}
+         </ion-item>
+   <ion-item>
+    <ion-label>Start</ion-label>
+    <ion-datetime displayFormat="DD-MMM-YY HH:mm" (ionChange)="toggle()" [(ngModel)]="content.startDate" min="{{ content.startDate }}" max="{{ content.startDate }}" > </ion-datetime>
+   </ion-item>
+   <ion-item>
+    <ion-label>End</ion-label>
+    <ion-datetime displayFormat="DD-MMM-YY HH:mm" (ionChange)="toggle()" [(ngModel)]="content.endDate"  min="{{ content.endDate }}" max="{{ content.endDate }}" > </ion-datetime>
+   </ion-item>
+   </div>
+   <div *ngIf="content.showYTube">
+     <a [href]="content.link" target="_blank">
+     <table>
+     <tr>
+          <td>
+             <img [src]="content.thumbnail" height="250" width="350" />
+           <table>
+                  <tr>
+                  <td background="https://pc-clips-storage.s3.us-west-1.amazonaws.com/play.png" height="50" width="60">
+                  </td>
+                  </tr>
+           </table>
+          </td>
+     </tr>
+   </table>
+    </a>
+    </div>
+    <div *ngIf="content.showLink">
+    <a [href]="content.link">{{ content.title }}</a>
+    </div>
+   </ion-item>
+  <div *ngIf="content.object == 2">
+  <ion-item>
+    <ion-avatar slot="start">
+     <a  (click)="unlike()">
+                <ion-icon name="thumbs-down"></ion-icon>
+     </a>
+  </ion-avatar>
+  &nbsp;&nbsp; &nbsp;
+  <ion-avatar slot="start">
+     <a  (click)="like()">
+                <ion-icon name="thumbs-up"></ion-icon>
+     </a>
+  </ion-avatar>
+  </ion-item>
+  </div>
+  <div *ngIf="content.object != 2">
+  <ion-item>
+  <ion-avatar slot="start" *ngIf="content.archive == 0">
+     <a  (click)="object2()">
+                <ion-icon name="checkbox-outline"></ion-icon>
+     </a>
+  </ion-avatar>
+  &nbsp;&nbsp; &nbsp;
+  <ion-avatar slot="start">
+     <a  (click)="object1()" *ngIf="content.archive == 0">
+                <ion-icon name="close-circle-outline"></ion-icon>
+     </a>
+  </ion-avatar>
+  &nbsp;&nbsp; &nbsp;
+  <ion-avatar slot="start" *ngIf="content.archive == 0">
+     <a  (click)="archive()">
+                <ion-icon name="archive"></ion-icon>
+     </a>
+  </ion-avatar>
+  &nbsp;&nbsp; &nbsp;
+  <ion-avatar slot="start" *ngIf="content.archive == 1">
+     <a  (click)="purge()">
+                <ion-icon name="trash"></ion-icon>
+     </a>
+  </ion-avatar>
+ </ion-item>
+  </div>
+ </ion-list>
+</ion-content>

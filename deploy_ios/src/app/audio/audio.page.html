@@ -1,0 +1,36 @@
+  <ion-header>
+  <ion-toolbar>
+    <ion-title>Audio</ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="create-contents"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+ </ion-header>
+ <ion-content>
+ <ion-list lines="none">
+ <ion-item>
+    <ion-label position="stacked"> Title:</ion-label>
+    <ion-input type="title" placeholder="Title" [(ngModel)]="signinService.title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked"> Audio:</ion-label>
+    <input type="file" (change)="onFileChange($event)" enctype="multipart/form-data"   accept="audio/*" />
+    <ion-button color="danger" expand="full"  shape="round" (click)="submitForm()">Upload</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked"> Thumbnail:</ion-label>
+    <input type="file" (change)="onFileChangeThumbnail($event)" enctype="multipart/form-data"   accept="image/*" />
+    <ion-button color="danger" expand="full"  shape="round" (click)="submitFormThumbnail()">Upload</ion-button>
+  </ion-item>
+  <ion-item>
+    <video  controls poster="{{ content.thumbnail }}" width="225" height="175">
+     <source src="{{ content.link }}" type="video/mp4" >
+     Your browser does not support the <code>audio</code> element.
+    </video>
+  </ion-item>
+  <ion-item>
+      <ion-button expand="block" color="danger" shape="round"  (click)="save()" >Save</ion-button>
+      <ion-button expand="block" color="danger"  shape="round" (click)="cancel()" >Cancel</ion-button>
+  </ion-item>
+ </ion-list>
+</ion-content>

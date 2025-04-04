@@ -1,0 +1,169 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    </ion-title>
+    <ion-buttons slot="start">
+      <div *ngIf="!signinService.logged">
+        <ion-icon name="person-remove-outline" (click)="signin()"></ion-icon>
+      </div>
+      <div *ngIf="signinService.logged">
+         <ion-button  color="danger" shape="round" name="document" (click)="createProfile()" >
+                <ion-icon name="exit"  color="dark" ></ion-icon>
+         </ion-button>
+          <ion-avatar slot="start" (click)="signout()" >
+                <img [src]="signinService.user.login">
+          </ion-avatar>
+         <ion-button  color="danger" shape="round" name="document" (click)="createContents()" >
+                <ion-icon name="create" color="dark" ></ion-icon>
+         </ion-button>
+      </div>
+    </ion-buttons>
+    <ion-buttons slot="end">
+         <a  (click)="offend()" ion-button full clear>
+                <ion-icon name="close-circle-outline" color="danger" ></ion-icon>
+                <ion-label color="danger" *ngIf="objectCnt.object > 0" > {{ objectCnt.object }} </ion-label>
+         </a>
+    </ion-buttons>
+    <ion-img style="height:30%;width:100%"  [src]="hlink"></ion-img>
+     <a (click)="playclip()" >
+	<center>  ©™Playclips</center>
+     </a>
+   </ion-toolbar>
+  </ion-header>
+<ion-content>
+ <ion-list lines="none">
+ <app-top-nav></app-top-nav>
+  <ion-virtual-scroll [items]="contentService.contentsData">
+
+    <ion-item *virtualItem="let item">
+      <ion-item *ngIf="item.type == 'contact'">
+      <ion-avatar slot="start" >
+        <img src="{{item.thumbnail}}">
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-avatar>
+      </ion-item>
+      <ion-item *ngIf="item.type == 'todo'">
+      <ion-avatar slot="start" >
+        <img src="{{item.thumbnail}}">
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+      </ion-avatar>
+      </ion-item>
+      <ion-item *ngIf="item.showImage">
+      <ion-avatar slot="start" >
+        <img src="{{item.thumbnail}}">
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-avatar>
+      </ion-item>
+      <ion-item *ngIf="item.showAudio">
+      <ion-avatar slot="start">
+        <img src="{{item.thumbnail}}">
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="volume-high-outline"></ion-icon>
+      </ion-avatar>
+      </ion-item>
+      <ion-item *ngIf="item.showVideo">
+      <ion-avatar slot="start" >
+        <img src="{{item.thumbnail}}">
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="videocam-outline"></ion-icon>
+      </ion-avatar>
+      </ion-item>
+      <ion-item *ngIf="item.showYTube">
+        <ion-avatar slot="start" >
+          <img src="{{item.thumbnail}}">
+        </ion-avatar>
+        <ion-avatar slot="end">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </ion-avatar>
+        </ion-item>
+     <ion-item *ngIf="item.showText">
+      <ion-avatar slot="start">
+        <img src="{{item.thumbnail}}">
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="reader-outline"></ion-icon>
+      </ion-avatar>
+      </ion-item>
+     <ion-item *ngIf="item.showPdf">
+      <ion-avatar slot="start">
+        <img src="{{item.thumbnail}}">
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="newspaper-outline"></ion-icon>
+      </ion-avatar>
+      </ion-item>
+     <ion-item *ngIf="item.showLink">
+      <ion-avatar slot="start">
+        <img src="{{item.thumbnail}}">
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="link-outline"></ion-icon>
+      </ion-avatar>
+      </ion-item>
+      <ion-item *ngIf="item.showAppt">
+      <ion-avatar slot="start">
+        <img src="{{item.thumbnail}}">
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="calendar"></ion-icon>
+      </ion-avatar>
+      </ion-item>
+      <ion-item *ngIf="item.showRecord">
+      <ion-avatar slot="start">
+        <img src="{{item.thumbnail}}">
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="recording-outline"></ion-icon>
+      </ion-avatar>
+      </ion-item>
+      <ion-label>
+        <h2>{{item.title}}</h2>
+      </ion-label>
+      <ion-item>
+       <ion-avatar slot="start" *ngIf="item.like" >
+        <ion-icon name="thumbs-up"></ion-icon>
+      </ion-avatar>
+      <ion-avatar slot="start" *ngIf="item.unlike" >
+        <ion-icon name="thumbs-down"></ion-icon>
+      </ion-avatar>
+       <ion-avatar slot="start" *ngIf="item.object == 1 && !(item.like || item.unlike)" >
+        <ion-icon name="close-circle-outline"></ion-icon>
+      </ion-avatar>
+       <ion-avatar slot="start" *ngIf="item.object == 2 && !(item.like || item.unlike)" >
+        <ion-icon name="checkbox-outline"></ion-icon>
+      </ion-avatar>
+      </ion-item>
+      <ion-item>
+       <ion-avatar slot="start" *ngIf="item.archive == 1" >
+        <ion-icon name="archive"></ion-icon>
+      </ion-avatar>
+      </ion-item>
+
+      <ion-avatar>
+        <ion-icon name="chevron-forward" (click)="show(item.id, item.type, item.link)"></ion-icon>
+      </ion-avatar>
+      
+    </ion-item>
+
+
+
+
+  </ion-virtual-scroll>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-list>
+
+</ion-content>
+

@@ -1,0 +1,16 @@
+ <ion-item *ngIf="item.login != 'assets/img/demo.png' && item.login != 'assets/img/admin.png'">
+ <ion-avatar slot="start"> 
+  <ion-img [src]="item.login"></ion-img>
+ </ion-avatar>
+ <div *ngIf="item.object >= 5">
+  <ion-icon name="close-circle-outline" color="danger" ></ion-icon>
+  <ion-label color="danger"> {{ item.object }} </ion-label>
+ </div>
+ <div *ngIf="item.object < 5">
+  <ion-icon name="close-circle-outline" color="red" ></ion-icon>
+  <ion-label> {{ item.object }} </ion-label>
+ </div>
+  <ion-button  color="danger" shape="round" name="document" (click)="block(item.login)" *ngIf="item.object >= 2" >
+     Block
+  </ion-button>
+</ion-item>

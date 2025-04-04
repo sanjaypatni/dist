@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+    </ion-title>
+     <ion-img style="height:30%;width:99%"  [src]="hlink"></ion-img>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-list lines="none">
+  <ion-item>
+   <ion-item>
+	<ion-avatar slot="start"  >
+         <img [src]="signinService.user.login"/>
+        </ion-avatar>
+   </ion-item>
+  </ion-item>
+  <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+</ion-list>
+<ion-item  lines="none">
+  <ion-button shape="round" color="danger" (click)="signinJwt();" >Sign in</ion-button>
+  <ion-button expand="round" color="danger" (click)="signup();" >Sign up</ion-button>
+</ion-item>
+</ion-content>

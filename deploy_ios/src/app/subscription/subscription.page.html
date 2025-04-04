@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="tab1"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  
+  <div class="main"  *ngIf="ssub.subscription == 'basic'" >
+    <table>
+    <tr>
+    <td>
+    <div class="containers">
+      <h3>Current subscription is Basic</h3>
+      <div id="joke" class="joke">Free</div>
+      <div [innerHtml]="basicDesc"></div>
+    </div>
+    </td>
+    </tr>
+    </table>
+    <table>
+    <tr>
+    <td>
+    <div class="containers">
+      <div id="joke" class="joke">Personal</div>
+      <div [innerHtml]="personalDesc"></div>
+      <button id="jokeBtn" class="btn" (click)="personal()">Subscribe</button>  
+    </div>
+    </td>
+    </tr>
+    </table>
+    <table>
+    <tr>
+    <td>
+    <div class="containers">
+      <div id="joke" class="joke">Team</div>
+      <div [innerHtml]="teamDesc"></div>
+      <button id="jokeBtn" class="btn" (click)="team()">Subscribe</button>  
+    </div>
+    </td>
+    </tr>
+    </table>
+   </div>
+  <div class="main"  *ngIf="ssub.subscription == 'personal'" >
+ <table>
+    <tr>
+    <td>
+    <div class="containers">
+      <div id="joke" class="joke">Free</div>
+      <div [innerHtml]="basicDesc"></div>
+      <button id="jokeBtn" class="btn" (click)="basic()">Subscribe</button>
+    </div>
+    </td>
+    </tr>
+    </table>
+    <table>
+    <tr>
+    <td>
+    <div class="containers">
+      <h3>Current subscription is Personal</h3>
+      <div id="joke" class="joke">Personal</div>
+      <div [innerHtml]="personalDesc"></div>
+    </div>
+    </td>
+    </tr>
+    </table>
+    <table>
+    <tr>
+    <td>
+    <div class="containers">
+      <div id="joke" class="joke">Team</div>
+      <div [innerHtml]="teamDesc"></div>
+      <button id="jokeBtn" class="btn" (click)="team()">Subscribe</button>
+    </div>
+    </td>
+    </tr>
+    </table>
+  </div>
+  <div class="main"  *ngIf="ssub.subscription == 'team'" >
+    <table>
+    <tr>
+    <td>
+    <div class="containers">
+      <div id="joke" class="joke">Free</div>
+      <div [innerHtml]="basicDesc"></div>
+      <button id="jokeBtn" class="btn" (click)="basic()">Subscribe</button>
+    </div>
+    </td>
+    </tr>
+    </table>
+    <table>
+    <tr>
+    <td>
+    <div class="containers">
+      <div id="joke" class="joke">Personal</div>
+      <div [innerHtml]="personalDesc"></div>
+      <button id="jokeBtn" class="btn" (click)="personal()">Subscribe</button>
+    </div>
+    </td>
+    </tr>
+    </table>
+    <table>
+    <tr>
+    <td>
+    <div class="containers">
+      <h3>Current subscription is Team</h3>
+      <div id="joke" class="joke">Team</div>
+      <div [innerHtml]="teamDesc"></div>
+    </div>
+    </td>
+    </tr>
+    </table>
+  </div>
+</ion-content>

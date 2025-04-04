@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Delete Account</ion-title>
+  </ion-toolbar>
+  <ion-buttons>
+      <ion-back-button defaultHref="sign-in"></ion-back-button>
+  </ion-buttons>
+</ion-header>
+<ion-content>
+<ion-list lines="none">
+<ion-item>
+        <ion-item>
+         <ion-avatar slot="start" >
+         <img [src]="signinService.user.login"/>
+        </ion-avatar>
+  </ion-item>
+</ion-item>
+<ion-item>
+      <ion-button expand="block" shape="round" color="danger" (click)="deleteAccount()" >Delete</ion-button>
+</ion-item>
+</ion-list>
+</ion-content>

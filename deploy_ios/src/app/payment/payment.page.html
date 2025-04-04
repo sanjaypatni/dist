@@ -1,0 +1,50 @@
+<ion-toolbar>
+    <ion-title>Payment</ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="tab4"></ion-back-button>
+    </ion-buttons>
+</ion-toolbar>
+<ion-content>
+ <ion-accordion-group>
+ <ion-accordion value="CR">
+ <ion-item slot="header" color="light">
+      <ion-label>Credit Card</ion-label>
+ </ion-item>
+ <div class="ion-padding" slot="content"> 
+ <ion-list lines="none">
+ <ion-item>
+   <ion-label> Title </ion-label>
+   <ion-input type="text" placeholder="Playclips Title" [(ngModel)]="playclipsService.playclip.title"></ion-input>
+ </ion-item>
+ <ion-item>
+   <ion-label> Amount $</ion-label>
+   <ion-input type="number" placeholder="Payment Amount" [(ngModel)]="playclipsService.playclip.price"></ion-input>
+ </ion-item>
+ <ion-item>
+   <ion-label> CVC </ion-label>
+   <ion-input type="number" placeholder="CVC" [(ngModel)]="cvc"></ion-input>
+ </ion-item>
+ <ion-button expand="round" color="danger" (click)="chargeCR();" >Charge</ion-button>
+ </ion-list>
+ </div>
+ </ion-accordion>
+ <ion-accordion value="Wallet">
+ <ion-item slot="header" color="light">
+      <ion-label>Wallet</ion-label>
+ </ion-item>
+ <div class="ion-padding" slot="content"> 
+ <ion-list lines="none">
+ <ion-item>
+   <ion-label> Title </ion-label>
+   <ion-input type="text" placeholder="Playclips Title" [(ngModel)]="playclipsService.playclip.title"></ion-input>
+ </ion-item>
+ <ion-item>
+   <ion-label> Amount $</ion-label>
+   <ion-input type="number" placeholder="Payment Amount" [(ngModel)]="playclipsService.playclip.price"></ion-input>
+ </ion-item>
+ <ion-button expand="round" color="danger" (click)="blockchainTransaction();" >Charge</ion-button>
+ </ion-list>
+ </div>
+ </ion-accordion>
+ </ion-accordion-group>
+</ion-content>

@@ -1,0 +1,211 @@
+<ion-row class="ion-justify-content-center" color="info">
+<div *ngIf="signinService.user.role == 'creator'" color="info">
+  <ul class="pagination">
+   <li
+      class="page-item"
+      [ngClass]="{ active: i === signinService.selectedTab }"
+      *ngFor="let item of tabs_item; let i = index"
+    >
+    <a (click)="itemClick(i)" class="page-link">{{ item.text  }}</a>
+    </li>
+  </ul>
+</div>
+</ion-row>
+<ion-item *ngIf="signinService.showMediaWidgets && signinService.selectedTab==0">
+       <div slot="start">
+          <ion-icon name="videocam-outline"></ion-icon>
+          <div *ngIf="signinService.video == true" class="toggle-container">
+           <input type="checkbox" id="tvideo" class="toggle"  (click)="toggleVideo()" checked />
+           <label for="tvideo" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Video </span>
+          </div>
+          <div *ngIf="signinService.video == false" class="toggle-container">
+           <input type="checkbox" id="tvideo" class="toggle" (click)="toggleVideo()" />
+           <label for="tvideo" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Video </span>
+          </div>
+          <ion-icon name="logo-youtube"></ion-icon>
+          <div *ngIf="signinService.ytube == true" class="toggle-container">
+           <input type="checkbox" id="tytube" class="toggle"  (click)="toggleYtube()" checked />
+           <label for="tytube" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> YTube </span>
+          </div>
+          <div *ngIf="signinService.ytube == false" class="toggle-container">
+           <input type="checkbox" id="tytube" class="toggle" (click)="toggleYtube()" />
+           <label for="tytube" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> YTube </span>
+          </div>
+       </div>
+        <div slot="end">
+          <ion-icon name="recording-outline"></ion-icon>
+          <div *ngIf="signinService.record == true" class="toggle-container">
+           <input type="checkbox" id="trecord" class="toggle"  (click)="toggleYtube()" checked />
+           <label for="trecord" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Record </span>
+          </div>
+          <div *ngIf="signinService.record == false" class="toggle-container">
+           <input type="checkbox" id="trecord" class="toggle" (click)="toggleRecord()" />
+           <label for="trecord" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Record </span>
+          </div>
+          <ion-icon name="volume-high-outline"></ion-icon>
+          <div *ngIf="signinService.audio == true" class="toggle-container">
+           <input type="checkbox" id="taudio" class="toggle"  (click)="toggleAudio()" checked />
+           <label for="taudio" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Audio </span>
+          </div>
+          <div *ngIf="signinService.audio == false" class="toggle-container">
+           <input type="checkbox" id="taudio" class="toggle" (click)="toggleAudio()" />
+           <label for="taudio" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Audio </span>
+          </div>
+        </div>
+    </ion-item>
+    <ion-item *ngIf="signinService.showTextWidgets && signinService.selectedTab==1">
+        <div slot="start">
+          <ion-icon name="newspaper-outline"></ion-icon>
+          <div *ngIf="signinService.pdf == true" class="toggle-container">
+           <input type="checkbox" id="tpdf" class="toggle"  (click)="togglePdf()" checked />
+           <label for="tpdf" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Pdf </span>
+          </div>
+          <div *ngIf="signinService.pdf == false" class="toggle-container">
+           <input type="checkbox" id="tpdf" class="toggle" (click)="togglePdf()" />
+           <label for="tpdf" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Pdf </span>
+          </div>
+          <ion-icon name="reader-outline"></ion-icon>
+          <div *ngIf="signinService.text == true" class="toggle-container">
+           <input type="checkbox" id="ttext" class="toggle"  (click)="toggleText()" checked />
+           <label for="ttext" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Text </span>
+          </div>
+          <div *ngIf="signinService.text == false" class="toggle-container">
+           <input type="checkbox" id="ttext" class="toggle" (click)="toggleText()" />
+           <label for="ttext" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Text </span>
+          </div>
+        </div>
+        <div slot="end">
+          <ion-icon name="link-outline"></ion-icon>
+          <div *ngIf="signinService.link == true" class="toggle-container">
+           <input type="checkbox" id="tlink" class="toggle"  (click)="toggleLink()" checked />
+           <label for="tlink" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Link </span>
+          </div>
+          <div *ngIf="signinService.link == false" class="toggle-container">
+           <input type="checkbox" id="tlink" class="toggle" (click)="toggleLink()" />
+           <label for="tlink" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Link </span>
+          </div>
+          <ion-icon name="camera-outline"></ion-icon>
+          <div *ngIf="signinService.image == true" class="toggle-container">
+           <input type="checkbox" id="timage" class="toggle"  (click)="toggleImage()" checked />
+           <label for="timage" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Image </span>
+          </div>
+          <div *ngIf="signinService.image == false" class="toggle-container">
+           <input type="checkbox" id="timage" class="toggle" (click)="toggleImage()" />
+           <label for="timage" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Image </span>
+          </div>
+         </div>
+    </ion-item>
+    <ion-item *ngIf="signinService.showConnectWidgets && signinService.selectedTab==2">
+        <div slot="start">
+          <ion-icon name="people-circle-outline"></ion-icon>
+          <div *ngIf="signinService.contact == true" class="toggle-container">
+           <input type="checkbox" id="tcontact" class="toggle"  (click)="toggleContact()" checked />
+           <label for="tcontact" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Contact </span>
+          </div>
+          <div *ngIf="signinService.contact == false" class="toggle-container">
+           <input type="checkbox" id="tcontact" class="toggle" (click)="toggleContact()" />
+           <label for="tcontact" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Contact </span>
+          </div>
+          <ion-icon name="calendar"></ion-icon>
+          <div *ngIf="signinService.appt == true" class="toggle-container">
+           <input type="checkbox" id="tappt" class="toggle"  (click)="toggleAppt()" checked />
+           <label for="tappt" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Appointment </span>
+          </div>
+          <div *ngIf="signinService.appt == false" class="toggle-container">
+           <input type="checkbox" id="tappt" class="toggle" (click)="toggleAppt()" />
+           <label for="tappt" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Appointment </span>
+          </div>
+        </div>
+        <div slot="end">
+          <ion-icon name="checkmark-outline"></ion-icon>
+          <div *ngIf="signinService.todo == true" class="toggle-container">
+           <input type="checkbox" id="ttodo" class="toggle"  (click)="toggleTodo()" checked />
+           <label for="ttodo" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Todo </span>
+          </div>
+          <div *ngIf="signinService.todo == false" class="toggle-container">
+           <input type="checkbox" id="ttodo" class="toggle" (click)="toggleTodo()" />
+           <label for="ttodo" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Todo </span>
+          </div>
+          <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+          <div *ngIf="signinService.chat == true" class="toggle-container">
+           <input type="checkbox" id="tchat" class="toggle"  (click)="toggleChat()" checked />
+           <label for="tchat" class="label">
+             <div class="ball"></div>
+           </label>
+	  <span> Chat </span>
+          </div>
+          <div *ngIf="signinService.chat == false" class="toggle-container">
+           <input type="checkbox" id="tchat" class="toggle" (click)="toggleChat()" />
+           <label for="tchat" class="label">
+             <div class="ball"></div>
+           </label>
+           <span> Chat </span>
+          </div>
+         </div>
+    </ion-item>

@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+    <ion-title>
+       <center> </center>
+    </ion-title>
+    <ion-buttons slot="start">
+      <div *ngIf="!signinService.logged">
+        <ion-icon name="person-remove-outline" (click)="signin()"></ion-icon>
+      </div>
+      <div>
+         <ion-button  color="danger" shape="round" name="document" (click)="createProfile()" >
+                <ion-icon name="exit"  color="dark" ></ion-icon>
+         </ion-button>
+          <ion-avatar slot="start" (click)="signout()" >
+                <img [src]="signinService.user.login">
+          </ion-avatar>
+         <ion-button  color="danger" shape="round" name="document" (click)="createContents()" >
+                <ion-icon name="create"  color="dark" ></ion-icon>
+         </ion-button>
+      </div>
+    </ion-buttons>
+    <ion-buttons slot="end">
+       <ion-icon name="logo-buffer" color="dark" (click)="createPc()"></ion-icon>
+    	 <ion-label *ngIf="signinService.pcCnt>0" >
+      		{{ signinService.pcCnt }}
+    	 </ion-label>
+     </ion-buttons>
+     <ion-img style="height:30%;width:100%"  [src]="hlink"></ion-img>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+<div class="slider-container" *ngIf="this.clipReviewed.length > 0">
+     <div class="left-slide">
+      <app-tile *ngFor="let clip of this.clipReviewed" [item]="clip"></app-tile>
+     </div>
+     <div class="right-slide">
+      <app-tile *ngFor="let clip of this.clipReviewed1" [item]="clip"></app-tile>
+     </div>
+      <div class="action-buttons">
+       <button class="down-button" (click)="downButton()">
+         <ion-icon name="chevron-down" color="blue"></ion-icon> 
+       </button>
+       <button class="up-button" (click)="upButton()">
+         <ion-icon name="chevron-up" color="blue"></ion-icon> 
+       </button>
+     </div>
+</div>
+</ion-content>

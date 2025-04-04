@@ -1,0 +1,35 @@
+<ion-app>
+
+  <ion-router-outlet></ion-router-outlet>
+  <ion-tabs>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="tab1" *ngIf="signinService.user.role == 'creator' || signinService.user.role == 'admin'">
+        <ion-label color="dark">{{ tab1 }} </ion-label>
+        <ion-icon name="server-outline" color="dark"></ion-icon>
+      </ion-tab-button>
+  
+    
+      <ion-tab-button tab="tab2" *ngIf="signinService.user.role == 'creator' || signinService.user.role == 'admin'">
+        <ion-label color="dark">{{ tab2 }} </ion-label>
+        <ion-icon name="stop-outline" color="dark"></ion-icon>
+      </ion-tab-button>
+    
+      <ion-tab-button tab="tab3" *ngIf="signinService.user.role == 'creator' || signinService.user.role == 'admin'">
+        <ion-label color="dark">{{ tab3 }} </ion-label>
+        <ion-icon name="square" color="dark"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="tab4" *ngIf="signinService.user.role == 'creator' || signinService.user.role == 'user' || signinService.user.role == 'admin' ">
+        <ion-label color="dark">{{ tab4 }} </ion-label>
+        <ion-icon name="logo-buffer" color="dark"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="tab5" *ngIf="signinService.user.role == 'admin' ">
+        <ion-label color="dark">{{ tab5 }} </ion-label>
+        <ion-icon name="logo-usd" color="dark"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-app>
+<ion-row class="ion-justify-content-center">
+   Copyright © 2016 - 2025 Core Takeaways(Playclips), CA.  All Rights Reserved.
+</ion-row>

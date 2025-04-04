@@ -1,0 +1,174 @@
+{
+  "appPolicies" : {
+    "eula" : "",
+    "policies" : [
+      {
+        "locale" : "en_US",
+        "policyText" : "",
+        "policyURL" : ""
+      }
+    ]
+  },
+  "identifier" : "C225B9FE",
+  "nonRenewingSubscriptions" : [
+    {
+      "displayPrice" : "49.99",
+      "familyShareable" : false,
+      "internalID" : "6502553473",
+      "localizations" : [
+        {
+          "description" : "Edit profile in app to activate subscription",
+          "displayName" : "Lifetime",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "lifetime",
+      "referenceName" : "lifetime",
+      "type" : "NonRenewingSubscription"
+    },
+    {
+      "displayPrice" : "99.99",
+      "familyShareable" : false,
+      "internalID" : "6502560755",
+      "localizations" : [
+        {
+          "description" : "Edit profile in app to activate subscription",
+          "displayName" : "Lifetime Team",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "lifetimeTeam",
+      "referenceName" : "lifetimeTeam",
+      "type" : "NonRenewingSubscription"
+    }
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "1549384191",
+    "_developerTeamID" : "7DH368D68P",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 737148306.82453203,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21480759",
+      "localizations" : [
+
+      ],
+      "name" : "playclips",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "4.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6499322783",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Edit profile in app to activate subscription",
+              "displayName" : "Personal (Monthly)",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "personal9",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "personal9",
+          "subscriptionGroupID" : "21480759",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "9.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "6499323431",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Edit profile in app to activate subscription",
+              "displayName" : "Team (Monthly)",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "team9",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "team9",
+          "subscriptionGroupID" : "21480759",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

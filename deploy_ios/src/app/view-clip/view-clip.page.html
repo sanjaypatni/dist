@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>View</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<div class="overview">
+   <h3>{{item.title}}</h3>
+   <h4>{{item.description}}</h4>
+</div>
+<ion-item *ngIf="item.type == 'video'">
+   <p><a [href]="item.link" target="_blank"> <img [src]="item.thumbnail" /> </a></p>
+ </ion-item>
+ <ion-item *ngIf="item.type == 'ytube'">
+   <p><a [href]="item.link" target="_blank"> <img [src]="item.thumbnail" /> </a></p>
+ </ion-item>
+ <ion-item *ngIf="item.type == 'pdf'">
+   <iframe src="assets/iframe.html" name="iframe_a1" height="175px" width="225px" ></iframe>
+  <p><a [href]="this.dom.bypassSecurityTrustResourceUrl(item.base64String)" target="iframe_a1">Load</a></p>
+ </ion-item>
+ <ion-item *ngIf="item.type == 'image'">
+  <ion-img [src]="item.base64String"  height="175px" width="225px" ></ion-img>
+ </ion-item>
+ <ion-item *ngIf="item.type == 'text'">
+    <ion-item text-wrap>
+          {{item.description}}
+    </ion-item>
+ </ion-item>
+ <ion-item *ngIf="item.type == 'appt'">
+         <ion-item text-wrap>
+          {{item.description}}
+         </ion-item>
+         <ion-item text-wrap>
+          {{item.link}}
+         </ion-item>
+   <ion-item>
+    <ion-label>Start</ion-label>
+    <ion-datetime displayFormat="DD-MMM-YY HH:mm" (ionChange)="toggle()" [(ngModel)]="item.startDate" min="{{ item.startDate }}" max="{{ item.startDate }}" > </ion-datetime>
+   </ion-item>
+   <ion-item>
+    <ion-label>End</ion-label>
+    <ion-datetime displayFormat="DD-MMM-YY HH:mm" (ionChange)="toggle()" [(ngModel)]="item.endDate"  min="{{ item.endDate }}" max="{{ item.endDate }}" > </ion-datetime>
+   </ion-item>
+  </ion-item>
+ <ion-item *ngIf="item.type == 'contact'">
+        <ion-item>
+          {{item.email}}
+        </ion-item>
+        <ion-item>
+          {{item.phone}}
+        </ion-item>
+ </ion-item>
+<ion-item *ngIf="item.type == 'audio'">
+    <video  controls poster="{{ item.thumbnail }}" height="175px" width="225px">
+     <source src="{{ item.link }}" type="video/mp4" >
+     Your browser does not support the <code>audio</code> element.
+    </video>
+</ion-item>
+</ion-content>

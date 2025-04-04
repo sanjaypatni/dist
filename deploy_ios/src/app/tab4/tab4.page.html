@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+       <center>  </center>
+    </ion-title>
+    <ion-buttons slot="start">
+      <div *ngIf="!signinService.logged">
+        <ion-icon name="person-remove-outline" (click)="signin()"></ion-icon>
+      </div>
+      <div *ngIf="signinService.logged">
+         <ion-button  color="danger" shape="round" name="document" (click)="createProfile()" >
+                <ion-icon name="exit"  color="dark" ></ion-icon>
+         </ion-button>
+          <ion-avatar slot="start" (click)="signout()" >
+                <img [src]="signinService.user.login">
+          </ion-avatar>
+          <ion-button  color="danger" shape="round" name="document" (click)="createContents()" >
+                <ion-icon name="create" color="dark" ></ion-icon>
+         </ion-button>
+      </div>
+    </ion-buttons>
+     <ion-buttons slot="end">
+    </ion-buttons>
+      <ion-img style="height:30%;width:100%"  [src]="hlink"></ion-img>
+   </ion-toolbar>
+  </ion-header>
+<ion-content>
+  <ion-list lines="none">
+   <app-playclips *ngFor="let playclip of playclipsA" [playclip]="playclip"></app-playclips>
+  </ion-list>
+
+</ion-content>

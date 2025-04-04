@@ -1,0 +1,760 @@
+src/app/components/playclips/playclips.component.ts:15:14
+ERROR: 15:14   no-empty                  block is empty
+
+src/app/components/tile/tile.component.ts:19:14
+ERROR: 19:14   no-empty                  block is empty
+
+src/app/components/top-nav/top-nav.component.ts:5:54
+ERROR: 5:54    no-trailing-whitespace    trailing whitespace
+ERROR: 16:1    no-trailing-whitespace    trailing whitespace
+ERROR: 22:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 58:273  no-trailing-whitespace    trailing whitespace
+ERROR: 66:14   no-empty                  block is empty
+ERROR: 68:1    no-trailing-whitespace    trailing whitespace
+ERROR: 71:10   triple-equals             == should be ===
+ERROR: 79:11   triple-equals             == should be ===
+ERROR: 79:16   no-trailing-whitespace    trailing whitespace
+ERROR: 87:11   triple-equals             == should be ===
+ERROR: 87:16   no-trailing-whitespace    trailing whitespace
+ERROR: 89:33   triple-equals             == should be ===
+ERROR: 89:44   no-trailing-whitespace    trailing whitespace
+ERROR: 91:33   triple-equals             == should be ===
+ERROR: 91:44   no-trailing-whitespace    trailing whitespace
+ERROR: 96:21   triple-equals             != should be !==
+ERROR: 131:35  no-trailing-whitespace    trailing whitespace
+ERROR: 140:5   object-literal-shorthand  Expected property shorthand in object literal ('{message}').
+ERROR: 146:1   no-trailing-whitespace    trailing whitespace
+ERROR: 150:16  prefer-const              Identifier 'clip' is never reassigned; use 'const' instead of 'let'.
+ERROR: 151:24  triple-equals             == should be ===
+ERROR: 154:24  triple-equals             == should be ===
+ERROR: 157:23  triple-equals             == should be ===
+ERROR: 160:23  triple-equals             == should be ===
+ERROR: 162:23  triple-equals             == should be ===
+ERROR: 164:23  triple-equals             == should be ===
+ERROR: 166:23  triple-equals             == should be ===
+ERROR: 168:23  triple-equals             == should be ===
+ERROR: 170:23  triple-equals             == should be ===
+ERROR: 172:23  triple-equals             == should be ===
+ERROR: 174:23  triple-equals             == should be ===
+ERROR: 176:23  triple-equals             == should be ===
+ERROR: 184:16  prefer-const              Identifier 'clip' is never reassigned; use 'const' instead of 'let'.
+ERROR: 185:24  triple-equals             == should be ===
+ERROR: 188:24  triple-equals             == should be ===
+ERROR: 191:23  triple-equals             == should be ===
+ERROR: 194:23  triple-equals             == should be ===
+ERROR: 196:23  triple-equals             == should be ===
+ERROR: 198:23  triple-equals             == should be ===
+ERROR: 200:23  triple-equals             == should be ===
+ERROR: 202:23  triple-equals             == should be ===
+ERROR: 204:23  triple-equals             == should be ===
+ERROR: 206:23  triple-equals             == should be ===
+ERROR: 208:23  triple-equals             == should be ===
+ERROR: 210:23  triple-equals             == should be ===
+ERROR: 216:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 228:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 240:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 252:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 264:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 276:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 288:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 300:5   no-console                Calls to 'console.log' are not allowed.
+
+src/app/contact/contact.page.ts:20:14
+ERROR: 20:14   no-empty                  block is empty
+
+src/app/content-details/content-details.page.ts:19:52
+ERROR: 19:52   no-trailing-whitespace    trailing whitespace
+ERROR: 20:46   no-trailing-whitespace    trailing whitespace
+ERROR: 34:14   no-empty                  block is empty
+ERROR: 35:1    no-trailing-whitespace    trailing whitespace
+ERROR: 40:5    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 40:9    prefer-const              Identifier 'index' is never reassigned; use 'const' instead of 'var'.
+ERROR: 41:5    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 41:9    prefer-const              Identifier 'id' is never reassigned; use 'const' instead of 'var'.
+ERROR: 42:1    no-trailing-whitespace    trailing whitespace
+ERROR: 45:133  no-trailing-whitespace    trailing whitespace
+ERROR: 50:28   triple-equals             == should be ===
+ERROR: 50:39   no-trailing-whitespace    trailing whitespace
+ERROR: 52:28   triple-equals             == should be ===
+ERROR: 52:40   no-trailing-whitespace    trailing whitespace
+ERROR: 55:27   triple-equals             == should be ===
+ERROR: 58:27   triple-equals             == should be ===
+ERROR: 61:27   triple-equals             == should be ===
+ERROR: 64:27   triple-equals             == should be ===
+ERROR: 66:27   triple-equals             == should be ===
+ERROR: 73:27   triple-equals             == should be ===
+ERROR: 75:27   triple-equals             == should be ===
+ERROR: 77:1    no-trailing-whitespace    trailing whitespace
+ERROR: 80:97   no-empty                  block is empty
+ERROR: 97:72   no-empty                  block is empty
+
+src/app/create-contents/create-contents.module.ts:17:37
+ERROR: 17:37   no-trailing-whitespace    trailing whitespace
+
+src/app/create-contents/create-contents.page.ts:27:5
+ERROR: 27:5    comment-format            comment must start with a space
+ERROR: 29:5    comment-format            comment must start with a space
+ERROR: 31:5    comment-format            comment must start with a space
+ERROR: 34:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 37:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 38:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 44:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 45:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 46:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 48:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 53:51   no-trailing-whitespace    trailing whitespace
+ERROR: 54:47   no-trailing-whitespace    trailing whitespace
+ERROR: 56:56   no-trailing-whitespace    trailing whitespace
+ERROR: 58:51   no-trailing-whitespace    trailing whitespace
+ERROR: 60:34   no-trailing-whitespace    trailing whitespace
+ERROR: 100:21  triple-equals             != should be !==
+ERROR: 135:35  no-trailing-whitespace    trailing whitespace
+ERROR: 144:9   prefer-const              Identifier 'alert' is never reassigned; use 'const' instead of 'let'.
+ERROR: 146:7   object-literal-shorthand  Expected property shorthand in object literal ('{message}').
+ERROR: 149:24  no-empty                  block is empty
+ERROR: 157:5   object-literal-shorthand  Expected property shorthand in object literal ('{message}').
+ERROR: 180:1   no-trailing-whitespace    trailing whitespace
+ERROR: 181:9   prefer-const              Identifier 'formData' is never reassigned; use 'const' instead of 'let'.
+ERROR: 183:9   prefer-const              Identifier 'rheaders' is never reassigned; use 'const' instead of 'let'.
+ERROR: 191:74  no-empty                  block is empty
+ERROR: 200:16  no-empty                  block is empty
+ERROR: 205:15  no-empty                  block is empty
+ERROR: 210:1   no-trailing-whitespace    trailing whitespace
+ERROR: 222:1   jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 222:1   jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 223:1   jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 223:1   jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 224:1   jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 224:1   jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 225:1   jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 225:1   jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 226:1   jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 226:1   jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 227:1   jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 251:1   max-classes-per-file      A maximum of 1 class per file is allowed.
+
+src/app/create-pc/create-pc.page.ts:19:14
+ERROR: 19:14   no-empty                  block is empty
+ERROR: 31:1    no-trailing-whitespace    trailing whitespace
+ERROR: 34:6    prefer-for-of             Expected a 'for-of' loop instead of a 'for' loop with this simple iteration
+ERROR: 41:24   triple-equals             != should be !==
+ERROR: 57:6    prefer-for-of             Expected a 'for-of' loop instead of a 'for' loop with this simple iteration
+ERROR: 58:87   no-trailing-whitespace    trailing whitespace
+ERROR: 73:9    comment-format            comment must start with a space
+ERROR: 76:9    comment-format            comment must start with a space
+ERROR: 81:45   triple-equals             == should be ===
+ERROR: 91:5    object-literal-shorthand  Expected property shorthand in object literal ('{message}').
+ERROR: 98:21   triple-equals             != should be !==
+
+src/app/create-profile/create-profile.page.ts:14:84
+ERROR: 14:84   no-trailing-whitespace    trailing whitespace
+ERROR: 15:41   no-trailing-whitespace    trailing whitespace
+ERROR: 18:82   no-shadowed-variable      Shadowed name: 'response'
+ERROR: 18:95   no-trailing-whitespace    trailing whitespace
+ERROR: 31:95   no-shadowed-variable      Shadowed name: 'response'
+ERROR: 44:95   no-shadowed-variable      Shadowed name: 'response'
+ERROR: 53:14   no-empty                  block is empty
+ERROR: 58:1    no-trailing-whitespace    trailing whitespace
+
+src/app/delete-account/delete-account.page.ts:13:14
+ERROR: 13:14   no-empty                  block is empty
+
+src/app/edit-clip/edit-clip.page.ts:17:5
+ERROR: 17:5    comment-format            comment must start with a space
+ERROR: 19:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 22:178  no-trailing-whitespace    trailing whitespace
+ERROR: 25:14   no-empty                  block is empty
+ERROR: 28:28   no-trailing-whitespace    trailing whitespace
+ERROR: 34:5    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 34:9    prefer-const              Identifier 'index' is never reassigned; use 'const' instead of 'var'.
+ERROR: 35:5    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 35:9    prefer-const              Identifier 'id' is never reassigned; use 'const' instead of 'var'.
+ERROR: 83:1    no-trailing-whitespace    trailing whitespace
+ERROR: 86:27   triple-equals             == should be ===
+ERROR: 88:27   triple-equals             == should be ===
+ERROR: 91:27   triple-equals             == should be ===
+ERROR: 94:125  no-trailing-whitespace    trailing whitespace
+ERROR: 97:26   triple-equals             == should be ===
+ERROR: 100:26  triple-equals             == should be ===
+ERROR: 103:26  triple-equals             == should be ===
+ERROR: 106:26  triple-equals             == should be ===
+ERROR: 108:26  triple-equals             == should be ===
+ERROR: 133:69  no-empty                  block is empty
+ERROR: 141:68  no-empty                  block is empty
+
+src/app/explore-container/explore-container.component.ts:11:17
+ERROR: 11:17   no-empty                  block is empty
+ERROR: 13:14   no-empty                  block is empty
+
+src/app/image/image.page.ts:32:14
+ERROR: 32:14   no-empty                  block is empty
+ERROR: 38:5    object-literal-shorthand  Expected property shorthand in object literal ('{message}').
+ERROR: 41:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 46:1    no-trailing-whitespace    trailing whitespace
+ERROR: 48:4    no-console                Calls to 'console.log' are not allowed.
+ERROR: 69:9    prefer-const              Identifier 'formData' is never reassigned; use 'const' instead of 'let'.
+ERROR: 71:9    prefer-const              Identifier 'rheaders' is never reassigned; use 'const' instead of 'let'.
+ERROR: 75:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 79:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 84:74   no-empty                  block is empty
+ERROR: 105:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 109:1   max-classes-per-file      A maximum of 1 class per file is allowed.
+
+src/app/models/clip.ts:10:14
+ERROR: 10:14   ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+
+src/app/models/search-item.ts:6:1
+ERROR: 6:1     max-classes-per-file      A maximum of 1 class per file is allowed.
+ERROR: 9:1     max-classes-per-file      A maximum of 1 class per file is allowed.
+ERROR: 12:1    max-classes-per-file      A maximum of 1 class per file is allowed.
+
+src/app/payment/payment.page.ts:16:14
+ERROR: 16:14   no-empty                  block is empty
+ERROR: 23:9    no-console                Calls to 'console.log' are not allowed.
+ERROR: 24:41   no-trailing-whitespace    trailing whitespace
+ERROR: 30:9    no-console                Calls to 'console.log' are not allowed.
+ERROR: 33:9    no-console                Calls to 'console.log' are not allowed.
+ERROR: 39:4    no-trailing-whitespace    trailing whitespace
+
+src/app/pdf/pdf.page.ts:33:14
+ERROR: 33:14   no-empty                  block is empty
+ERROR: 39:5    object-literal-shorthand  Expected property shorthand in object literal ('{message}').
+ERROR: 42:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 47:1    no-trailing-whitespace    trailing whitespace
+ERROR: 49:4    no-console                Calls to 'console.log' are not allowed.
+ERROR: 59:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 59:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 60:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 60:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 61:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 61:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 62:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 76:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 77:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 83:1    no-trailing-whitespace    trailing whitespace
+ERROR: 84:9    prefer-const              Identifier 'formData' is never reassigned; use 'const' instead of 'let'.
+ERROR: 86:9    prefer-const              Identifier 'rheaders' is never reassigned; use 'const' instead of 'let'.
+ERROR: 89:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 94:1    no-trailing-whitespace    trailing whitespace
+ERROR: 95:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 100:74  no-empty                  block is empty
+ERROR: 121:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 125:1   max-classes-per-file      A maximum of 1 class per file is allowed.
+
+src/app/play/play.page.ts:29:14
+ERROR: 29:14   no-empty                  block is empty
+ERROR: 33:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 39:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 40:5    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 40:9    prefer-const              Identifier 'index' is never reassigned; use 'const' instead of 'var'.
+ERROR: 41:5    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 41:9    prefer-const              Identifier 'id' is never reassigned; use 'const' instead of 'var'.
+ERROR: 42:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 43:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 46:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 49:17   prefer-const              Identifier 'clip' is never reassigned; use 'const' instead of 'let'.
+ERROR: 51:19   triple-equals             == should be ===
+ERROR: 62:4    no-console                Calls to 'console.log' are not allowed.
+ERROR: 63:74   no-empty                  block is empty
+
+src/app/preview/preview.page.ts:27:14
+ERROR: 27:14   no-empty                  block is empty
+ERROR: 31:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 37:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 38:5    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 38:9    prefer-const              Identifier 'index' is never reassigned; use 'const' instead of 'var'.
+ERROR: 39:5    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 39:9    prefer-const              Identifier 'id' is never reassigned; use 'const' instead of 'var'.
+ERROR: 40:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 41:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 44:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 47:17   prefer-const              Identifier 'clip' is never reassigned; use 'const' instead of 'let'.
+ERROR: 49:24   triple-equals             == should be ===
+ERROR: 51:19   triple-equals             == should be ===
+ERROR: 60:1    no-trailing-whitespace    trailing whitespace
+ERROR: 62:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 63:1    no-trailing-whitespace    trailing whitespace
+ERROR: 67:4    no-console                Calls to 'console.log' are not allowed.
+ERROR: 73:3    no-console                Calls to 'console.log' are not allowed.
+ERROR: 78:14   prefer-const              Identifier 'clip' is never reassigned; use 'const' instead of 'let'.
+ERROR: 78:42   no-trailing-whitespace    trailing whitespace
+ERROR: 82:3    no-console                Calls to 'console.log' are not allowed.
+
+src/app/profile/profile.page.ts:11:9
+ERROR: 11:9    ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 12:11   ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 13:19   ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 21:3    no-console                Calls to 'console.log' are not allowed.
+ERROR: 25:6    no-console                Calls to 'console.log' are not allowed.
+
+src/app/search-results-yt/search-results-yt.page.ts:18:55
+ERROR: 18:55   no-trailing-whitespace    trailing whitespace
+ERROR: 29:5    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 29:9    prefer-const              Identifier 'results' is never reassigned; use 'const' instead of 'var'.
+ERROR: 31:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 34:1    no-trailing-whitespace    trailing whitespace
+ERROR: 35:5    forin                     for (... in ...) statements must be filtered with an if statement
+ERROR: 35:10   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 35:14   prefer-const              Identifier 'item' is never reassigned; use 'const' instead of 'var'.
+ERROR: 36:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 37:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 38:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 39:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 46:9    comment-format            comment must start with a space
+ERROR: 51:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 59:9    comment-format            comment must start with a space
+ERROR: 62:9    comment-format            comment must start with a space
+ERROR: 67:31   triple-equals             == should be ===
+ERROR: 78:5    no-console                Calls to 'console.log' are not allowed.
+
+src/app/services/chat.service.ts:27:5
+ERROR: 27:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 39:23   ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 40:28   ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 47:5    no-console                Calls to 'console.error' are not allowed.
+ERROR: 51:4    no-console                Calls to 'console.error' are not allowed.
+ERROR: 55:6    no-trailing-whitespace    trailing whitespace
+
+src/app/services/clips.service.ts:16:100
+ERROR: 16:100  no-trailing-whitespace    trailing whitespace
+ERROR: 17:4    no-console                Calls to 'console.log' are not allowed.
+ERROR: 25:56   no-empty                  block is empty
+ERROR: 55:1    no-trailing-whitespace    trailing whitespace
+ERROR: 59:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 61:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 84:35   no-trailing-whitespace    trailing whitespace
+ERROR: 89:58   ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 90:1    no-trailing-whitespace    trailing whitespace
+ERROR: 91:46   ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 96:1    no-trailing-whitespace    trailing whitespace
+ERROR: 97:57   ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 98:46   ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 110:6   no-console                Calls to 'console.error' are not allowed.
+ERROR: 114:5   no-console                Calls to 'console.error' are not allowed.
+ERROR: 118:4   no-trailing-whitespace    trailing whitespace
+ERROR: 119:18  no-trailing-whitespace    trailing whitespace
+
+src/app/services/contents.service.ts:18:1
+ERROR: 18:1    no-trailing-whitespace    trailing whitespace
+ERROR: 20:96   no-trailing-whitespace    trailing whitespace
+ERROR: 37:1    no-trailing-whitespace    trailing whitespace
+ERROR: 45:1    no-trailing-whitespace    trailing whitespace
+ERROR: 52:23   no-trailing-whitespace    trailing whitespace
+ERROR: 56:19   no-trailing-whitespace    trailing whitespace
+ERROR: 90:1    no-trailing-whitespace    trailing whitespace
+ERROR: 93:1    no-trailing-whitespace    trailing whitespace
+ERROR: 98:154  no-trailing-whitespace    trailing whitespace
+ERROR: 100:1   no-trailing-whitespace    trailing whitespace
+ERROR: 109:10  comment-format            comment must start with a space
+ERROR: 109:21  no-trailing-whitespace    trailing whitespace
+ERROR: 116:1   no-trailing-whitespace    trailing whitespace
+ERROR: 123:5   no-console                Calls to 'console.error' are not allowed.
+ERROR: 124:56  no-unused-expression      unused expression, expected an assignment or function call
+ERROR: 128:4   no-console                Calls to 'console.error' are not allowed.
+ERROR: 138:7   no-console                Calls to 'console.log' are not allowed.
+ERROR: 139:16  prefer-const              Identifier 'content' is never reassigned; use 'const' instead of 'let'.
+ERROR: 140:27  triple-equals             == should be ===
+ERROR: 140:38  no-trailing-whitespace    trailing whitespace
+ERROR: 143:27  triple-equals             == should be ===
+ERROR: 146:26  triple-equals             == should be ===
+ERROR: 149:26  triple-equals             == should be ===
+ERROR: 151:26  triple-equals             == should be ===
+ERROR: 153:26  triple-equals             == should be ===
+ERROR: 155:26  triple-equals             == should be ===
+ERROR: 157:26  triple-equals             == should be ===
+ERROR: 159:26  triple-equals             == should be ===
+ERROR: 168:1   no-trailing-whitespace    trailing whitespace
+ERROR: 174:16  prefer-const              Identifier 'content' is never reassigned; use 'const' instead of 'let'.
+ERROR: 175:27  triple-equals             == should be ===
+ERROR: 178:27  triple-equals             == should be ===
+ERROR: 180:26  triple-equals             == should be ===
+ERROR: 183:26  triple-equals             == should be ===
+ERROR: 186:26  triple-equals             == should be ===
+ERROR: 188:26  triple-equals             == should be ===
+ERROR: 190:26  triple-equals             == should be ===
+ERROR: 192:26  triple-equals             == should be ===
+ERROR: 194:26  triple-equals             == should be ===
+ERROR: 204:5   no-trailing-whitespace    trailing whitespace
+
+src/app/services/payment.service.ts:34:5
+ERROR: 34:5    no-console                Calls to 'console.error' are not allowed.
+ERROR: 38:4    no-console                Calls to 'console.error' are not allowed.
+ERROR: 42:4    no-trailing-whitespace    trailing whitespace
+
+src/app/services/playclips.service.ts:39:30
+ERROR: 39:30   no-trailing-whitespace    trailing whitespace
+ERROR: 47:6    no-console                Calls to 'console.error' are not allowed.
+ERROR: 51:5    no-console                Calls to 'console.error' are not allowed.
+ERROR: 55:4    no-trailing-whitespace    trailing whitespace
+
+src/app/services/sign-in.service.ts:19:1
+ERROR: 19:1    no-trailing-whitespace    trailing whitespace
+ERROR: 23:8    ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 24:12   ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 25:11   ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 34:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 34:67   no-trailing-whitespace    trailing whitespace
+ERROR: 72:67   no-trailing-whitespace    trailing whitespace
+ERROR: 77:6    no-console                Calls to 'console.log' are not allowed.
+ERROR: 123:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 148:3   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 148:7   prefer-const              Identifier 'name' is never reassigned; use 'const' instead of 'var'.
+ERROR: 149:3   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 149:7   prefer-const              Identifier 'decodedCookie' is never reassigned; use 'const' instead of 'var'.
+ERROR: 150:3   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 150:7   prefer-const              Identifier 'ca' is never reassigned; use 'const' instead of 'var'.
+ERROR: 151:3   prefer-for-of             Expected a 'for-of' loop instead of a 'for' loop with this simple iteration
+ERROR: 151:7   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 152:5   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 153:24  triple-equals             == should be ===
+ERROR: 156:25  triple-equals             == should be ===
+ERROR: 175:35  no-trailing-whitespace    trailing whitespace
+ERROR: 187:5   no-console                Calls to 'console.error' are not allowed.
+ERROR: 191:4   no-console                Calls to 'console.error' are not allowed.
+ERROR: 195:4   no-trailing-whitespace    trailing whitespace
+
+src/app/services/subscription.service.ts:25:35
+ERROR: 25:35   no-trailing-whitespace    trailing whitespace
+ERROR: 48:5    no-console                Calls to 'console.error' are not allowed.
+ERROR: 49:56   no-unused-expression      unused expression, expected an assignment or function call
+ERROR: 53:4    no-console                Calls to 'console.error' are not allowed.
+ERROR: 58:4    no-trailing-whitespace    trailing whitespace
+
+src/app/share/share.page.ts:20:14
+ERROR: 20:14   no-empty                  block is empty
+ERROR: 25:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 26:5    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 26:9    prefer-const              Identifier 'index' is never reassigned; use 'const' instead of 'var'.
+ERROR: 27:5    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 27:9    prefer-const              Identifier 'id' is never reassigned; use 'const' instead of 'var'.
+ERROR: 28:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 29:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 32:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 34:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 43:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 44:29   no-trailing-whitespace    trailing whitespace
+ERROR: 65:25   triple-equals             == should be ===
+
+src/app/sign-in/sign-in.page.ts:19:4
+ERROR: 19:4    no-console                Calls to 'console.log' are not allowed.
+ERROR: 21:18   no-string-literal         object access via string literals is disallowed
+ERROR: 21:45   no-string-literal         object access via string literals is disallowed
+ERROR: 21:54   triple-equals             != should be !==
+ERROR: 21:68   no-trailing-whitespace    trailing whitespace
+ERROR: 22:46   no-string-literal         object access via string literals is disallowed
+ERROR: 24:4    no-console                Calls to 'console.log' are not allowed.
+ERROR: 28:10   ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 34:96   no-trailing-whitespace    trailing whitespace
+ERROR: 35:42   no-trailing-whitespace    trailing whitespace
+ERROR: 36:38   no-trailing-whitespace    trailing whitespace
+ERROR: 47:9    no-console                Calls to 'console.log' are not allowed.
+ERROR: 48:9    no-console                Calls to 'console.log' are not allowed.
+ERROR: 67:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 68:55   no-trailing-whitespace    trailing whitespace
+ERROR: 69:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 75:9    no-console                Calls to 'console.log' are not allowed.
+ERROR: 76:9    no-console                Calls to 'console.log' are not allowed.
+ERROR: 77:9    no-console                Calls to 'console.log' are not allowed.
+ERROR: 78:62   triple-equals             == should be ===
+ERROR: 97:9    object-literal-shorthand  Expected property shorthand in object literal ('{message}').
+ERROR: 100:9   no-console                Calls to 'console.log' are not allowed.
+ERROR: 111:3   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 111:7   prefer-const              Identifier 'd' is never reassigned; use 'const' instead of 'var'.
+ERROR: 113:3   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 113:7   prefer-const              Identifier 'expires' is never reassigned; use 'const' instead of 'var'.
+ERROR: 117:3   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 117:7   prefer-const              Identifier 'name' is never reassigned; use 'const' instead of 'var'.
+ERROR: 118:3   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 118:7   prefer-const              Identifier 'decodedCookie' is never reassigned; use 'const' instead of 'var'.
+ERROR: 119:3   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 119:7   prefer-const              Identifier 'ca' is never reassigned; use 'const' instead of 'var'.
+ERROR: 120:3   prefer-for-of             Expected a 'for-of' loop instead of a 'for' loop with this simple iteration
+ERROR: 120:7   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 121:5   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 122:24  triple-equals             == should be ===
+ERROR: 125:25  triple-equals             == should be ===
+ERROR: 133:18  no-string-literal         object access via string literals is disallowed
+ERROR: 133:45  no-string-literal         object access via string literals is disallowed
+ERROR: 133:54  triple-equals             != should be !==
+ERROR: 133:68  no-trailing-whitespace    trailing whitespace
+ERROR: 134:46  no-string-literal         object access via string literals is disallowed
+
+src/app/signup/signup.page.ts:24:52
+ERROR: 24:52   no-trailing-whitespace    trailing whitespace
+ERROR: 25:65   no-trailing-whitespace    trailing whitespace
+ERROR: 30:8    no-trailing-whitespace    trailing whitespace
+ERROR: 34:14   no-empty                  block is empty
+ERROR: 42:26   triple-equals             != should be !==
+ERROR: 42:61   triple-equals             != should be !==
+ERROR: 42:97   triple-equals             != should be !==
+ERROR: 43:29   triple-equals             != should be !==
+ERROR: 43:53   no-trailing-whitespace    trailing whitespace
+ERROR: 46:69   no-trailing-whitespace    trailing whitespace
+ERROR: 49:42   no-trailing-whitespace    trailing whitespace
+ERROR: 53:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 54:24   triple-equals             == should be ===
+ERROR: 64:9    no-trailing-whitespace    trailing whitespace
+ERROR: 74:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 74:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 75:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 75:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 76:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 76:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 77:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 81:5    object-literal-shorthand  Expected property shorthand in object literal ('{message}').
+ERROR: 84:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 96:9    prefer-const              Identifier 'formData' is never reassigned; use 'const' instead of 'let'.
+ERROR: 98:9    prefer-const              Identifier 'rheaders' is never reassigned; use 'const' instead of 'let'.
+ERROR: 101:7   no-console                Calls to 'console.log' are not allowed.
+ERROR: 116:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 123:1   max-classes-per-file      A maximum of 1 class per file is allowed.
+
+src/app/subscription/subscription.page.ts:21:14
+ERROR: 21:14   no-empty                  block is empty
+ERROR: 25:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 34:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 43:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 53:7    object-literal-shorthand  Expected property shorthand in object literal ('{message}').
+ERROR: 56:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 62:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 63:40   triple-equals             != should be !==
+ERROR: 63:54   no-trailing-whitespace    trailing whitespace
+ERROR: 81:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 83:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 86:7    no-console                Calls to 'console.log' are not allowed.
+
+src/app/tab1/tab1.page.ts:17:3
+ERROR: 17:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 33:1    no-trailing-whitespace    trailing whitespace
+ERROR: 34:52   no-trailing-whitespace    trailing whitespace
+ERROR: 37:35   no-trailing-whitespace    trailing whitespace
+ERROR: 38:8    no-trailing-whitespace    trailing whitespace
+ERROR: 46:20   triple-equals             == should be ===
+ERROR: 46:76   triple-equals             == should be ===
+ERROR: 52:20   triple-equals             == should be ===
+ERROR: 52:68   triple-equals             == should be ===
+ERROR: 58:20   triple-equals             == should be ===
+ERROR: 58:76   triple-equals             == should be ===
+ERROR: 64:20   triple-equals             == should be ===
+ERROR: 64:73   triple-equals             == should be ===
+ERROR: 70:20   triple-equals             == should be ===
+ERROR: 70:77   triple-equals             == should be ===
+ERROR: 76:88   triple-equals             == should be ===
+ERROR: 81:84   triple-equals             == should be ===
+ERROR: 96:6    no-trailing-whitespace    trailing whitespace
+ERROR: 104:6   no-console                Calls to 'console.log' are not allowed.
+ERROR: 109:6   no-console                Calls to 'console.log' are not allowed.
+ERROR: 116:7   no-console                Calls to 'console.log' are not allowed.
+ERROR: 120:1   no-trailing-whitespace    trailing whitespace
+ERROR: 122:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 134:9   comment-format            comment must start with a space
+ERROR: 137:9   comment-format            comment must start with a space
+ERROR: 142:51  triple-equals             == should be ===
+ERROR: 156:1   jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 156:1   jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 157:1   jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 157:1   jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 158:1   jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 158:1   jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 159:1   jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 159:1   jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 160:1   jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 160:1   jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 160:8   no-trailing-whitespace    trailing whitespace
+ERROR: 161:1   jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 165:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 169:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 173:5   no-console                Calls to 'console.log' are not allowed.
+
+src/app/tab2/tab2.page.ts:20:10
+ERROR: 20:10   ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 23:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 24:35   no-trailing-whitespace    trailing whitespace
+ERROR: 25:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 28:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 29:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 30:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 32:3    variable-name             variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: 42:43   no-trailing-whitespace    trailing whitespace
+ERROR: 44:1    no-trailing-whitespace    trailing whitespace
+ERROR: 51:4    no-trailing-whitespace    trailing whitespace
+ERROR: 55:4    no-trailing-whitespace    trailing whitespace
+ERROR: 57:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 61:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 63:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 67:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 71:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 75:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 79:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 89:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 98:16   prefer-const              Identifier 'clip' is never reassigned; use 'const' instead of 'let'.
+ERROR: 100:24  triple-equals             == should be ===
+ERROR: 103:24  triple-equals             == should be ===
+ERROR: 106:23  triple-equals             == should be ===
+ERROR: 109:23  triple-equals             == should be ===
+ERROR: 111:23  triple-equals             == should be ===
+ERROR: 113:23  triple-equals             == should be ===
+ERROR: 115:23  triple-equals             == should be ===
+ERROR: 117:23  triple-equals             == should be ===
+ERROR: 119:23  triple-equals             == should be ===
+ERROR: 121:23  triple-equals             == should be ===
+ERROR: 123:23  triple-equals             == should be ===
+ERROR: 125:23  triple-equals             == should be ===
+ERROR: 131:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 137:5   no-console                Calls to 'console.log' are not allowed.
+
+src/app/tab3/tab3.page.ts:25:1
+ERROR: 25:1    no-trailing-whitespace    trailing whitespace
+ERROR: 32:10   ban-types                 Don't use 'String' as a type. Avoid using the `String` type. Did you mean `string`?
+ERROR: 36:1    no-trailing-whitespace    trailing whitespace
+ERROR: 38:43   no-trailing-whitespace    trailing whitespace
+ERROR: 39:1    no-trailing-whitespace    trailing whitespace
+ERROR: 42:3    no-console                Calls to 'console.log' are not allowed.
+ERROR: 44:20   triple-equals             == should be ===
+ERROR: 52:33   no-trailing-whitespace    trailing whitespace
+ERROR: 61:16   prefer-const              Identifier 'clip' is never reassigned; use 'const' instead of 'let'.
+ERROR: 68:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 69:16   prefer-const              Identifier 'clip' is never reassigned; use 'const' instead of 'let'.
+ERROR: 72:104  no-trailing-whitespace    trailing whitespace
+ERROR: 77:14   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 82:24   triple-equals             == should be ===
+ERROR: 85:24   triple-equals             == should be ===
+ERROR: 88:23   triple-equals             == should be ===
+ERROR: 91:23   triple-equals             == should be ===
+ERROR: 93:23   triple-equals             == should be ===
+ERROR: 95:23   triple-equals             == should be ===
+ERROR: 97:23   triple-equals             == should be ===
+ERROR: 99:23   triple-equals             == should be ===
+ERROR: 101:23  triple-equals             == should be ===
+ERROR: 103:23  triple-equals             == should be ===
+ERROR: 105:23  triple-equals             == should be ===
+ERROR: 107:23  triple-equals             == should be ===
+ERROR: 110:25  triple-equals             == should be ===
+ERROR: 112:25  triple-equals             == should be ===
+ERROR: 114:25  triple-equals             == should be ===
+ERROR: 116:25  triple-equals             == should be ===
+ERROR: 118:25  triple-equals             == should be ===
+ERROR: 120:1   no-trailing-whitespace    trailing whitespace
+ERROR: 121:26  triple-equals             == should be ===
+ERROR: 121:46  triple-equals             == should be ===
+ERROR: 131:4   no-console                Calls to 'console.log' are not allowed.
+ERROR: 139:8   no-trailing-whitespace    trailing whitespace
+ERROR: 146:17  no-console                Calls to 'console.log' are not allowed.
+ERROR: 148:11  no-trailing-whitespace    trailing whitespace
+ERROR: 151:41  comment-format            comment must start with a space
+ERROR: 151:55  no-trailing-whitespace    trailing whitespace
+ERROR: 152:17  no-console                Calls to 'console.log' are not allowed.
+ERROR: 153:17  no-console                Calls to 'console.log' are not allowed.
+ERROR: 155:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 164:4   no-console                Calls to 'console.log' are not allowed.
+ERROR: 179:17  no-console                Calls to 'console.log' are not allowed.
+ERROR: 184:41  comment-format            comment must start with a space
+ERROR: 185:17  no-console                Calls to 'console.log' are not allowed.
+ERROR: 186:17  no-console                Calls to 'console.log' are not allowed.
+ERROR: 188:4   no-console                Calls to 'console.log' are not allowed.
+ERROR: 198:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 202:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 206:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 210:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 223:30  no-trailing-whitespace    trailing whitespace
+ERROR: 227:2   no-console                Calls to 'console.log' are not allowed.
+ERROR: 231:2   no-console                Calls to 'console.log' are not allowed.
+
+src/app/tab4/tab4.page.ts:15:1
+ERROR: 15:1    no-trailing-whitespace    trailing whitespace
+ERROR: 39:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 41:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 42:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 43:16   prefer-const              Identifier 'pc' is never reassigned; use 'const' instead of 'let'.
+ERROR: 43:53   no-trailing-whitespace    trailing whitespace
+ERROR: 44:9    no-console                Calls to 'console.log' are not allowed.
+ERROR: 50:7    no-console                Calls to 'console.log' are not allowed.
+
+src/app/tabs/tabs.page.ts:10:17
+ERROR: 10:17   no-empty                  block is empty
+
+src/app/text/text.page.ts:21:14
+ERROR: 21:14   no-empty                  block is empty
+ERROR: 23:1    no-trailing-whitespace    trailing whitespace
+ERROR: 25:4    no-console                Calls to 'console.log' are not allowed.
+ERROR: 37:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 37:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 38:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 38:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 39:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 39:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 40:1    jsdoc-format              jsdoc is not formatted correctly on this line
+
+src/app/todo/todo.page.ts:10:17
+ERROR: 10:17   no-empty                  block is empty
+ERROR: 12:14   no-empty                  block is empty
+
+src/app/upload/upload.page.ts:19:9
+ERROR: 19:9    prefer-const              Identifier 'formData' is never reassigned; use 'const' instead of 'let'.
+ERROR: 23:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 31:14   no-empty                  block is empty
+ERROR: 35:1    max-classes-per-file      A maximum of 1 class per file is allowed.
+
+src/app/video/video.page.ts:35:14
+ERROR: 35:14   no-empty                  block is empty
+ERROR: 41:5    object-literal-shorthand  Expected property shorthand in object literal ('{message}').
+ERROR: 44:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 49:1    no-trailing-whitespace    trailing whitespace
+ERROR: 51:4    no-console                Calls to 'console.log' are not allowed.
+ERROR: 63:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 63:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 64:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 64:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 65:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 65:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 66:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 79:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 80:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 86:1    no-trailing-whitespace    trailing whitespace
+ERROR: 87:9    prefer-const              Identifier 'formData' is never reassigned; use 'const' instead of 'let'.
+ERROR: 89:9    prefer-const              Identifier 'rheaders' is never reassigned; use 'const' instead of 'let'.
+ERROR: 92:7    no-console                Calls to 'console.log' are not allowed.
+ERROR: 99:9    prefer-const              Identifier 'arr' is never reassigned; use 'const' instead of 'let'.
+ERROR: 102:7   no-console                Calls to 'console.log' are not allowed.
+ERROR: 104:7   no-console                Calls to 'console.log' are not allowed.
+ERROR: 106:7   no-console                Calls to 'console.log' are not allowed.
+ERROR: 112:74  no-empty                  block is empty
+ERROR: 133:5   no-console                Calls to 'console.log' are not allowed.
+ERROR: 137:1   max-classes-per-file      A maximum of 1 class per file is allowed.
+
+src/app/view-clip/view-clip.page.ts:10:17
+ERROR: 10:17   no-empty                  block is empty
+ERROR: 12:14   no-empty                  block is empty
+
+src/app/yt-add/yt-add.page.ts:22:39
+ERROR: 22:39   no-trailing-whitespace    trailing whitespace
+ERROR: 23:43   no-trailing-whitespace    trailing whitespace
+ERROR: 30:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 32:5    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 32:9    prefer-const              Identifier 'index' is never reassigned; use 'const' instead of 'var'.
+ERROR: 34:10   no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 34:14   prefer-const              Identifier 'item' is never reassigned; use 'const' instead of 'var'.
+ERROR: 35:29   triple-equals             == should be ===
+ERROR: 45:5    no-console                Calls to 'console.log' are not allowed.
+ERROR: 49:5    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 49:9    prefer-const              Identifier 'content' is never reassigned; use 'const' instead of 'var'.
+ERROR: 50:5    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 50:9    prefer-const              Identifier 'cnt' is never reassigned; use 'const' instead of 'var'.
+ERROR: 57:7    no-var-keyword            Forbidden 'var' keyword, use 'let' or 'const' instead
+ERROR: 57:11   no-shadowed-variable      Shadowed name: 'cnt'
+ERROR: 57:11   prefer-const              Identifier 'cnt' is never reassigned; use 'const' instead of 'var'.
+ERROR: 62:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 62:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 63:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 63:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 64:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 64:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 65:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 65:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 66:1    jsdoc-format              jsdoc is not formatted correctly on this line
+ERROR: 66:1    jsdoc-format              asterisks in jsdoc must be aligned
+ERROR: 67:1    jsdoc-format              jsdoc is not formatted correctly on this line
+
+src/main.ts:12:17
+ERROR: 12:17   no-console                Calls to 'console.log' are not allowed.
+

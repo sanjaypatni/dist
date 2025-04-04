@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Todo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-item  lines="none">
+ <ion-label position="stacked"> Title : </ion-label>
+ <ion-input type="name" placeholder="Task" [(ngModel)]="signinService.title"></ion-input>
+</ion-item>
+
+<ion-item  lines="none">
+      <ion-button expand="block" color="danger" shape="round" (click)="save()" >Save</ion-button>
+      <ion-button expand="block" color="danger"  shape="round" (click)="cancel()" >Cancel</ion-button>
+</ion-item>
+
+
+</ion-content>

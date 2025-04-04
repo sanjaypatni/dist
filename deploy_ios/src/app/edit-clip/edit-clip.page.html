@@ -1,0 +1,186 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Review</ion-title>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label position="stacked">Title</ion-label>
+      <ion-label> {{ clip.title }} </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Review</ion-label>
+      <ion-input type="text" placeholder="Write your review about clip here" [(ngModel)]="clip.description"></ion-input>
+    </ion-item>
+    <ion-item lines="none" >
+    <div *ngIf="clip.showImage" height="175px" width="225px">
+          <ion-avatar slot="end">
+        	<ion-icon name="camera-outline"></ion-icon>
+      	  </ion-avatar>
+         <ion-img [src]="clip.base64String"  ></ion-img>
+   </div>
+   <div *ngIf="clip.showAudio">
+          <ion-avatar slot="end">
+        	<ion-icon name="volume-high-outline"></ion-icon>
+      	  </ion-avatar>
+    <video  controls poster="{{ clip.thumbnail }}" height="175px" width="225px">
+     <source src="{{ clip.link }}" type="video/mp4" >
+     Your browser does not support the <code>audio</code> element.
+    </video>
+   </div>
+   <div *ngIf="clip.showRecord">
+          <ion-avatar slot="end">
+        	<ion-icon name="recording-outline"></ion-icon>
+      	  </ion-avatar>
+    <video  controls poster="{{ clip.thumbnail }}" height="175px" width="225px">
+     <source src="{{ clip.link }}" type="video/mp4" >
+     Your browser does not support the <code>audio</code> element.
+    </video>
+   </div>
+   <div *ngIf="clip.showVideo" poster="{{ clip.thumbnail }}" height="175px" width="225px">
+          <ion-avatar slot="end">
+        	<ion-icon name="videocam-outline"></ion-icon>
+      	  </ion-avatar>
+   <video controls>
+     <source src="{{ clip.link }}" type="video/mp4" >
+     Your browser does not support the <code>video</code> element.
+   </video>
+   </div>
+   <div *ngIf="clip.showYTube">
+          <ion-avatar slot="end">
+        	<ion-icon name="logo-youtube"></ion-icon>
+      	  </ion-avatar>
+    <a [href]="clip.link" target="_blank">
+     <table>
+     <tr>
+          <td>
+             <img [src]="clip.thumbnail" height="250" width="350" />
+           <table>
+                  <tr>
+                  <td background="https://pc-clips-storage.s3.us-west-1.amazonaws.com/play.png" height="50" width="60">
+                  </td>
+                  </tr>
+           </table>
+          </td>
+     </tr>
+   </table>
+    </a>
+    </div>
+    <div *ngIf="clip.showText">
+          <ion-avatar slot="end">
+        <ion-icon name="reader-outline"></ion-icon>
+      </ion-avatar>
+         {{ clip.description }}
+   </div>
+    <div *ngIf="clip.showContact">
+          <ion-avatar slot="end">
+        <ion-icon name="people-circle-outline"></ion-icon>
+      </ion-avatar>
+         {{ clip.email }}
+         {{ clip.phone }}
+   </div>
+    <div *ngIf="clip.showLink">
+          <ion-avatar slot="end">
+        <ion-icon name="link-outline"></ion-icon>
+      </ion-avatar>
+         <a [href]="clip.link"> {{ clip.title }}</a>
+   </div>
+   <div *ngIf="clip.showPdf && !signinService.platform.platforms().includes('ios')">
+      <ion-avatar slot="end">
+        <ion-icon name="newspaper-outline"></ion-icon>
+      </ion-avatar>
+           <iframe src="assets/iframe.html" name="iframe_a_{{ clip.title }" height="450px" width="800px" ></iframe>
+           <p><a [href]="this.dom.bypassSecurityTrustUrl(clip.base64String)" target="iframe_a_{{ clip.title }">Load</a></p>
+   </div>
+   <div *ngIf="clip.showPdf && signinService.platform.platforms().includes('ios')">
+      <ion-avatar slot="end">
+        <ion-icon name="newspaper-outline"></ion-icon>
+      </ion-avatar>
+         <ion-img [src]="clip.base64String"  ></ion-img>
+   </div>
+   <div *ngIf="clip.showAppt" poster="{{ clip.thumbnail }}" width="420" height="315">
+    <ion-avatar slot="end">
+        <ion-icon name="calendar"></ion-icon>
+      </ion-avatar>
+   <ion-item>
+    <ion-label>Start</ion-label>
+    <ion-datetime displayFormat="DD-MMM-YY HH:mm" (ionChange)="toggle()" [(ngModel)]="clip.startDate" min="{{ clip.startDate }}" max="{{ clip.startDate }}" > </ion-datetime>
+   </ion-item>
+   <ion-item>
+    <ion-label>End</ion-label>
+    <ion-datetime displayFormat="DD-MMM-YY HH:mm" (ionChange)="toggle()" [(ngModel)]="clip.endDate"  min="{{ clip.endDate }}" max="{{ clip.endDate }}" > </ion-datetime>
+   </ion-item>
+   </div>
+   </ion-item>
+
+    <ion-label>
+        Rating 
+    </ion-label>
+   <ion-item *ngIf="clip.rating == 0">
+     <ion-img src="assets/icon/star.png" (click)="oneStar()"></ion-img>
+     <ion-img src="assets/icon/star.png"   (click)="twoStar()"></ion-img>
+     <ion-img src="assets/icon/star.png"  (click)="threeStar()"></ion-img>
+     <ion-img src="assets/icon/star.png"  (click)="fourStar()"></ion-img>
+     <ion-img src="assets/icon/star.png"  (click)="fiveStar()"></ion-img>
+   </ion-item>
+   <ion-item *ngIf="clip.rating == 1">
+     <ion-img src="assets/icon/star-filled.png" (click)="oneStar()"></ion-img>
+     <ion-img src="assets/icon/star.png"   (click)="twoStar()"></ion-img>
+     <ion-img src="assets/icon/star.png"  (click)="threeStar()"></ion-img>
+     <ion-img src="assets/icon/star.png"  (click)="fourStar()"></ion-img>
+     <ion-img src="assets/icon/star.png"  (click)="fiveStar()"></ion-img>
+   </ion-item>
+   <ion-item *ngIf="clip.rating == 2">
+     <ion-img src="assets/icon/star-filled.png" (click)="oneStar()"></ion-img>
+     <ion-img src="assets/icon/star-filled.png"   (click)="twoStar()"></ion-img>
+     <ion-img src="assets/icon/star.png"  (click)="threeStar()"></ion-img>
+     <ion-img src="assets/icon/star.png"  (click)="fourStar()"></ion-img>
+     <ion-img src="assets/icon/star.png"  (click)="fiveStar()"></ion-img>
+   </ion-item>
+   <ion-item *ngIf="clip.rating == 3">
+     <ion-img src="assets/icon/star-filled.png" (click)="oneStar()"></ion-img>
+     <ion-img src="assets/icon/star-filled.png"   (click)="twoStar()"></ion-img>
+     <ion-img src="assets/icon/star-filled.png"  (click)="threeStar()"></ion-img>
+     <ion-img src="assets/icon/star.png"  (click)="fourStar()"></ion-img>
+     <ion-img src="assets/icon/star.png"  (click)="fiveStar()"></ion-img>
+   </ion-item>
+   <ion-item *ngIf="clip.rating == 4">
+     <ion-img src="assets/icon/star-filled.png" (click)="oneStar()"></ion-img>
+     <ion-img src="assets/icon/star-filled.png"   (click)="twoStar()"></ion-img>
+     <ion-img src="assets/icon/star-filled.png"  (click)="threeStar()"></ion-img>
+     <ion-img src="assets/icon/star-filled.png"  (click)="fourStar()"></ion-img>
+     <ion-img src="assets/icon/star.png"  (click)="fiveStar()"></ion-img>
+   </ion-item>
+   <ion-item *ngIf="clip.rating == 5">
+     <ion-img src="assets/icon/star-filled.png" (click)="oneStar()"></ion-img>
+     <ion-img src="assets/icon/star-filled.png"   (click)="twoStar()"></ion-img>
+     <ion-img src="assets/icon/star-filled.png"  (click)="threeStar()"></ion-img>
+     <ion-img src="assets/icon/star-filled.png"  (click)="fourStar()"></ion-img>
+     <ion-img src="assets/icon/star-filled.png"  (click)="fiveStar()"></ion-img>
+   </ion-item>
+
+    <ion-item>
+      <div *ngIf="signinService.page == 'tab2'"> 
+      <ion-avatar slot="start">
+       <a  (click)="update()">
+                <ion-icon name="save"></ion-icon>
+       </a>
+&nbsp;&nbsp; &nbsp;
+       <a  (click)="archive()" *ngIf="hide == false">
+                <ion-icon name="archive"></ion-icon>
+       </a>
+&nbsp;&nbsp; &nbsp;
+       <a  (click)="purge()" *ngIf="hide == true">
+                <ion-icon name="trash"></ion-icon>
+       </a>
+      </ion-avatar>
+      </div>
+    </ion-item>
+  </ion-list>
+  </ion-content>

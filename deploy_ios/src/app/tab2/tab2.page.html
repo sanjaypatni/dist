@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+       <center> </center>
+    </ion-title>
+    <ion-buttons slot="start">
+      <div *ngIf="!signinService.logged">
+        <ion-icon name="person-remove-outline" (click)="signin()"></ion-icon>
+      </div>
+      <div>
+         <ion-button  color="danger" shape="round" name="document" (click)="createProfile()" >
+                <ion-icon name="exit"  color="dark" ></ion-icon>
+         </ion-button>
+          <ion-avatar slot="start" (click)="signout()" >
+                <ion-img [src]="signinService.user.login"></ion-img>
+          </ion-avatar>
+          <ion-button  color="danger" shape="round" name="document" (click)="createContents()" >
+                <ion-icon name="create"  color="dark" ></ion-icon>
+         </ion-button>
+      </div>
+    </ion-buttons>
+    <ion-buttons slot="end">
+    </ion-buttons>
+    <ion-img style="height:30%;width:100%"  [src]="hlink"></ion-img>
+ </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" lines="none">
+ <div class="carousel" *ngIf="this.signinService.clipData.length > 0">
+  <div class="buttons-container" *ngIf="this.signinService.clipData.length > 0">
+       <button class="left-button" (click)="left()">
+          <ion-icon name="chevron-forward" color="blue"></ion-icon> 
+       </button>
+       <button class="right-button" (click)="right()">
+          <ion-icon name="chevron-back" color="blue"></ion-icon> 
+       </button>
+   </div>
+  <div class="image-container" id="imgs">
+   <app-tile *ngFor="let clip of this.signinService.clipData" [item]="clip"></app-tile>
+  </div>
+ </div>
+</ion-content>

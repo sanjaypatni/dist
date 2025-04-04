@@ -1,0 +1,4 @@
+https://masteringionic.com/blog/2022-05-07-pagination-with-ionic-and-angular
+ionic generate component components/tile
+npm install ngx-pagination --save
+ng generate module SharedComponents

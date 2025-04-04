@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Link</ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="tab1"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-item>
+ <ion-label position="stacked"> Title:</ion-label>
+ <ion-input type="name" placeholder="Title" [(ngModel)]="signinService.title"></ion-input>
+</ion-item>
+<ion-item>
+ <ion-label position="stacked"> Link:</ion-label>
+ <ion-input type="name" placeholder="Link" [(ngModel)]="link"></ion-input>
+</ion-item>
+<ion-item>
+      <ion-button expand="block" color="danger" shape="round" (click)="save()" >Save</ion-button>
+      <ion-button expand="block" color="danger"  shape="round" (click)="cancel()" >Cancel</ion-button>
+</ion-item>
+</ion-content>

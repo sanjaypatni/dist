@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+   <ion-toolbar>
+    <ion-title>
+       <center> Preview Playclip {{ playclip.title }} </center>
+    </ion-title>
+    <ion-buttons>
+     <ion-back-button defaultHref="tab4"></ion-back-button>
+    </ion-buttons>
+ </ion-toolbar>
+</ion-header>
+<ion-content>
+<div class="slider-container" *ngIf="this.clipReviewed.length > 0" >
+     <div class="left-slide">
+      <app-tile *ngFor="let clip of this.clipReviewed" [item]="clip"></app-tile>
+     </div>
+     <div class="right-slide">
+      <app-tile *ngFor="let clip of this.clipReviewed1" [item]="clip"></app-tile>
+     </div>
+      <div class="action-buttons">
+       <button class="down-button" (click)="downButton()">
+         <ion-icon name="chevron-down" color="blue"></ion-icon> 
+       </button>
+       <button class="up-button" (click)="upButton()">
+         <ion-icon name="chevron-up" color="blue"></ion-icon> 
+       </button>
+     </div>
+</div>
+</ion-content>

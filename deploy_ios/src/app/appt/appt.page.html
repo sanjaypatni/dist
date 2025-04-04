@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Appointment</ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="create-contents"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list lines="none">
+<div id="container">
+  <ion-item>
+    <ion-label position="stacked"> Title:</ion-label>
+    <ion-input type="title" placeholder="Title" [(ngModel)]="signinService.title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked"> Purpose:</ion-label>
+    <ion-input type="title" placeholder="Purpose" [(ngModel)]="description"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked"> Link:</ion-label>
+    <ion-input type="title" placeholder="Link" [(ngModel)]="link"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Start Date & Time</ion-label>
+    <ion-datetime displayFormat="DD-MMM-YY HH:mm" (ionChange)="toggle()" [(ngModel)]="startDate"> </ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>End Date & Time</ion-label>
+    <ion-datetime displayFormat="DD-MMM-YY HH:mm" (ionChange)="toggle()" [(ngModel)]="endDate"> </ion-datetime>
+  </ion-item>
+  <ion-item>
+     <ion-button slot="start" shape="round"  color="danger" expand="full" (click)="save();" >Create</ion-button>
+<ion-button expand="block" color="danger"  shape="round" (click)="cancel()" >Cancel</ion-button>
+
+  </ion-item>
+</div>
+ </ion-list>
+</ion-content>
