@@ -73,6 +73,23 @@ services:
     environment:
        MYSQL_SERVER: mysqldb
        EUREKA_SERVER: http://eureka:8761
+  web3j:
+    image: web3j
+    restart: on-failure
+    networks:
+      - custom3
+    external_links:
+      - eureka
+    container_name: web3j
+    build:
+      context: ./web3j
+      dockerfile: Dockerfile
+    ports:
+      - "8096:8096"
+    depends_on:
+       - mysqldb
+    volumes:
+      - ~/config:/var/config
   apigateway:
     image: sanjaypatni5/apigateway 
     networks:
