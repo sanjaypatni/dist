@@ -74,7 +74,7 @@ services:
        MYSQL_SERVER: mysqldb
        EUREKA_SERVER: http://eureka:8761
   web3j:
-    image: web3j
+    image: sanjaypatni5/web3j
     restart: on-failure
     networks:
       - custom3
