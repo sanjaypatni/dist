@@ -81,9 +81,6 @@ services:
     external_links:
       - eureka
     container_name: web3j
-    build:
-      context: ./web3j
-      dockerfile: Dockerfile
     ports:
       - "8096:8096"
     depends_on:
